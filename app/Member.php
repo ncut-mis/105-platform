@@ -8,7 +8,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 
-class User extends Authenticatable
+class Member extends Authenticatable
 {
     use Notifiable;
     protected $table = 'members';
@@ -37,3 +37,4 @@ class User extends Authenticatable
         return $this->hasMany(CouponsStatusEloquent::class);
     }
 }
+
