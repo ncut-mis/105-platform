@@ -29,6 +29,5 @@ class MemberController extends Controller
         $data=['$order'=>$customers];
 
         return view('order',$data);
-     
     }
 }
