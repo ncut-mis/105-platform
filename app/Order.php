@@ -7,8 +7,13 @@ use \App\Detail as DetailEloquent;
 use \App\CouponsStatus as CouponsStatusEloquent;
 use \App\Table as TableEloquent;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 class Order extends Model
 {
+
+    use Notifiable;
+    protected $table = 'orders';
+
     public function customer(){
         return $this->belongsTo(CustomerEloquent::class);
     }

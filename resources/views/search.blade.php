@@ -4,31 +4,7 @@
 
 <head>
     <style>
-        .pic {
-            position:relative;
-            width: 180px;
-            height: 180px;
-            overflow: hidden;
-            border-radius:50%;
-        }
-        .pic img {
-            width: 100%;
-            height: auto;
 
-        }
-
-        .pic2 {
-            position:relative;
-            width: 180px;
-            height: 180px;
-            overflow: hidden;
-            border-radius:50%;
-        }
-        .pic2 img {
-            width: auto;
-            height: 100%;
-
-        }
 
         /*.body {*/
         /*!* background-image: url("https://unsplash.com/photos/gFyy2Po7T-k") ; *!*/
@@ -54,41 +30,43 @@
 <div class="container">
     <div class="row">
         <div class="page-header">
-            <h1>訂位紀錄</h1>
+
         </div>
         <div class="row">
             <table class="table table-hover">
                 <thead>
                 <tr>
 
-                    <th>網頁</th>
-                    <th>name</th>
-                    <th>logo</th>
+                    <th width="200" style="text-align: center">網頁</th>
+                    <th width="200" style="text-align: center">name</th>
+                    <th width="200" style="text-align: center">logo</th>
 
 
                 </tr>
                 </thead>
                 <tbody>
 @if (count($restaurants) > 0)
+
     @foreach($restaurants as $restaurant)
         <div class="col-md-4">
             <div class="card" style="border-style: none;background-color:transparent;">
                 <div class="card-body" style="padding-top:1px;">
-
+                    <tr>
                     <form method="POST" action="{{route('restaurant{id}.home',$restaurant->id)}}">
                         {{ csrf_field() }}
                         {{ method_field('get') }}
-                        <td> <button type="submit" class="btn btn-primary col-md-11 " style="font-family: 微軟正黑體; font-weight: bold;">
+                        <td style="text-align: center"> <button type="submit" class="btn btn-primary col-md-11 " style="font-family: 微軟正黑體; font-weight: bold;">
                                 {{ __('前往') }}
                             </button></td>
 
-                            <td>{{$restaurant->name }}</td>
+                            <td style="text-align: center">{{$restaurant->name }}</td>
 
-                        <div class="pic">
-                            <td><img  src="{{$restaurant->logo}}"  class="center-block " alt="boy"></td>
-                        </div>
+
+                            <td style="text-align: center"><img  src="{{$restaurant->logo}}   "width="80" height="40" class="center-block " alt="boy"></td>
+
 
                     </form>
+                    </tr>
                 </div>
             </div>
         </div>

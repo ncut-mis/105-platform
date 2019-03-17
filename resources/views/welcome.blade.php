@@ -11,8 +11,14 @@
 
         <!-- Styles -->
         <style>
+
             html, body {
-                background-color: #fff;
+
+                background-image: url('/images/background1.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -85,13 +91,12 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
+                    <a href="https://blog.laravel.com">查看我的優惠卷(未)</a>
+                    <a href="https://nova.laravel.com">顯示會員QR(未)</a>
+                    <a href="{{ route('order.index') }}">用餐紀錄(未)</a>
                     <a href="{{ route('restaurant') }}">前往搜尋頁面</a>
+
+
                 </div>
             </div>
         </div>
