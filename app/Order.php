@@ -1,32 +1,40 @@
 <?php
 
 namespace App;
+use Illuminate\Notifications\Notifiable;
 use \App\Customer as CustomerEloquent;
 use \App\Restaurant as RestaurantEloquent;
-use \App\Detail as DetailEloquent;
-use \App\CouponsStatus as CouponsStatusEloquent;
-use \App\Table as TableEloquent;
+use \App\Item as ItemEloquent;
+use \App\Member_coupons as Member_couponsEloquent;
+use \App\OrderTable as OrderTableEloquent;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notifiable;
 class Order extends Model
 {
 
     use Notifiable;
     protected $table = 'orders';
+    protected $fillable = [
+        'restaurant_id',
+        'customer_id',
+        'people',
+        'time',
+        'total',
+        'PayType'
+    ];
 
     public function customer(){
-        return $this->belongsTo(CustomerEloquent::class);
+        return $this->hasOne(CustomerEloquent::class);
     }
     public function restaurant(){
-        return $this->hasOne(RestaurantEloquent::class);
+        return $this->belongsTo(RestaurantEloquent::class);
     }
-    public function detail(){
-        return $this->hasMany(DetailEloquent::class);
+    public function items(){
+        return $this->hasMany(ItemEloquent::class);
     }
-    public function CouponsStatus(){
-        return $this->hasone(CouponsStatusEloquent::class);
+    public function member_coupons(){
+        return $this->hasone(Member_couponsEloquent::class);
     }
-    public function table(){
-        return $this->hasone(TableEloquent::class);
+    public function OrderTables(){
+        return $this->hasmany(OrderTableEloquent::class);
     }
 }

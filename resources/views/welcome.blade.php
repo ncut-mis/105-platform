@@ -93,7 +93,7 @@
                 <div class="links">
                     <a href="https://blog.laravel.com">查看我的優惠卷(未)</a>
                     <a href="https://nova.laravel.com">顯示會員QR(未)</a>
-                    <a href="{{ route('order.index') }}">用餐紀錄(未)</a>
+                    <a href="{{ route('order.history') }}">用餐紀錄(未)</a>
                     <a href="{{ route('restaurant') }}">前往搜尋頁面</a>
 
 

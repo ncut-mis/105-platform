@@ -29,4 +29,8 @@ Route::get('restaurant/search',['as' => 'restaurant.search' , 'uses' => 'Restaur
 
 /*餐廳頁面*/
 Route::get('restaurant/{id}/home' ,['as' => 'restaurant{id}.home' , 'uses' => 'RestaurantController@home']);
-Route::get('member/order' ,['as' => 'order.index' , 'uses' => 'MemberController@index']);
+Route::get('order/history' ,['as' => 'order.history' , 'uses' => 'OrderController@index']);
+
+
+
+

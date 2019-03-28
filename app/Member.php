@@ -2,9 +2,8 @@
 
 namespace App;
 use \App\Customer as CustomerEloquent;
-use \App\CouponsStatus as CouponsStatusEloquent;
+use \App\Member_coupons as Member_couponsEloquent;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 
@@ -30,11 +29,11 @@ class Member extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function customer(){
+    public function customers(){
         return $this->hasMany(CustomerEloquent::class);
     }
-    public function CouponsStatus(){
-        return $this->hasMany(CouponsStatusEloquent::class);
+    public function member_coupons(){
+        return $this->hasMany(Member_couponsEloquent::class);
     }
 }
 
