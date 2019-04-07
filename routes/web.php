@@ -34,3 +34,10 @@ Route::get('order/history' ,['as' => 'order.history' , 'uses' => 'OrderControlle
 
 
 
+/*測試*/
+Route::get('/555', function () {
+    return view('index');
+});
+
+
+
