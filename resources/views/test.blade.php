@@ -16,8 +16,12 @@
 <body>
 
 <div class="visible-print text-center">
+
     {!! QrCode::size(500)->generate('http://localhost:8000/member/'. Auth::user()->id .'/verify/'. Auth::user()->verification_code ); !!}
     <p>http://localhost:8000/member/{{ Auth::user()->id }}/verify/{{ Auth::user()->verification_code }}</p>
+
+    {!! QrCode::size(500)->generate('http://localhost:8000/member/'. Auth::user()->id .'/verify/'. Auth::user()->member_verify ); !!}
+    <p>http://localhost:8000/member/{{ Auth::user()->id }}/verify/{{ Auth::user()->member_verify }}</p>
 </div>
 </body>
 </html>

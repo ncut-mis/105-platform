@@ -30,6 +30,25 @@ Route::get('restaurant/search',['as' => 'restaurant.search' , 'uses' => 'Restaur
 /*餐廳頁面*/
 Route::get('restaurant/{id}/home' ,['as' => 'restaurant{id}.home' , 'uses' => 'RestaurantController@home']);
 
+
+/*用餐紀錄*/
+Route::get('order/history' ,['as' => 'order.history' , 'uses' => 'OrderController@index']);
+
+/*會員QR*/
+Route::get('member/QRCode' ,['as' => 'member.QRCode' , 'uses' => 'MemberController@QR']);
+
+//掃描QR頁面*/
+Route::get('scanning', function () {
+    return view('/scanning');
+});
+
+
+/*測試*/
+Route::get('/555', function () {
+    return view('index');
+});
+
+
 /*用餐紀錄*/
 Route::get('order/history' ,['as' => 'order.history' , 'uses' => 'OrderController@index']);
 

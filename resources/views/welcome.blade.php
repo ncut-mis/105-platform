@@ -92,7 +92,9 @@
 
                 <div class="links">
                     <a href="http://localhost:8000//scanning">掃描QR</a>
+
                     <a href="{{ route('member.QRCode') }}">顯示會員QR</a>
+
                     <a href="{{ route('order.history') }}">用餐紀錄(未)</a>
                     <a href="{{ route('restaurant') }}">前往搜尋頁面</a>
 
