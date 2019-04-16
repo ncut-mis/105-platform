@@ -27,7 +27,7 @@ class MemberController extends Controller
 
         $verification_code = substr(str_shuffle($str), 0, 6);
         $member=Member::find(Auth::user()->id);
-        $member->member_verify=$verification_code;
+        $member->verification_code=$verification_code;
         $member->save();
         return view('test');
     }

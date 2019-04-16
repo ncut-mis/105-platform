@@ -62,7 +62,7 @@
                             <td style="text-align: center">{{$restaurant->name }}</td>
 
 
-                            <td style="text-align: center"><img  src="{{$restaurant->logo}}   "width="80" height="40" class="center-block " alt="boy"></td>
+                            <td style="text-align: center"><img   src="{{url('img/logo/'. $restaurant->logo)}}" width="80" height="40" class="center-block " alt="boy"></td>
 
 
                     </form>

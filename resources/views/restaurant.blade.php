@@ -288,7 +288,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <li class="slide-01">
                     <div class="menu-left">
                         <div class="pic2">
-                            <img src="{{$meal->photo }}" style="border:5px white solid; alt=""/>
+
+                            <img  src="{{url('img/meal/'. $meal->photo)}}" style="border:5px white solid; alt=""/>
                         </div>
                         <div class="menu-right">
                             <h4>{{$meal->name }} </h4>
