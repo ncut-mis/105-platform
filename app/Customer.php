@@ -6,12 +6,18 @@ use \App\Member as MemberEloquent;
 use \App\Order as OrderEloquent;
 use \App\Restaurant as RestaurantEloquent;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notifiable;
 
 class Customer extends Model
 {
-    use Notifiable;
+
     protected $table = 'customers';
+
+    protected $fillable = [
+        'id',
+        'restaurant_id',
+        'member_id',
+        'status',
+    ];
     public function order()
     {
         return $this->belongsTo(OrderEloquent::class);
