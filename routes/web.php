@@ -59,3 +59,8 @@ Route::get('member/QRCode' ,['as' => 'member.QRCode' , 'uses' => 'MemberControll
 Route::get('scanning', function () {
     return view('/scanning');
 });
+
+
+/*會員登入部分*/
+/*登入畫面*/
+Route::get('login/create' ,['as' => 'login.create' , 'uses' => 'LoginController@create']);

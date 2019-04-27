@@ -1,7 +1,6 @@
 @extends('layouts.index')
 
 @section('content')
-
     <section class="cid-rmWud60ljl mbr-fullscreen mbr-parallax-background" id="header2-1">
         <div class="container align-center">
             <div class="row justify-content-md-center">
