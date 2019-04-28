@@ -72,7 +72,7 @@
                                     class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span>點餐掃描</a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('order.history')}}"><span
                                     class="mbri-file mbr-iconfont mbr-iconfont-btn"></span>用餐紀錄</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href=""><span
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('coupon')}}"><span
                                     class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>優惠卷</a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('member.QRCode')}}"><span
                                     class="mbri-sites mbr-iconfont mbr-iconfont-btn"></span>會員憑證</a></li>

@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('content')
-    <section class="cid-roVOPuBJb3" id="pricing-tables1-e">
+    <section class="cid-roVOPuBJb3 mbr-fullscreen" id="pricing-tables1-e">
 
         <div class="container">
             <div class="media-container-row row">
@@ -9,7 +9,7 @@
                 <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
                     <div class="plan-header text-center pt-5">
                         <h3 class="plan-title mbr-fonts-style display-5">
-                            2019/04/28
+                            2019/04/26
                         </h3>
                         <div class="plan-price">
                         <span class="price-value mbr-fonts-style display-5">
@@ -46,7 +46,7 @@
                 <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
                     <div class="plan-header text-center pt-5">
                         <h3 class="plan-title mbr-fonts-style display-5">
-                            2019/04/28
+                            2019/04/24
                         </h3>
                         <div class="plan-price">
                         <span class="price-value mbr-fonts-style display-5">
@@ -83,7 +83,7 @@
                 <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
                     <div class="plan-header text-center pt-5">
                         <h3 class="plan-title mbr-fonts-style display-5">
-                            2019/04/28
+                            2019/04/21
                         </h3>
                         <div class="plan-price">
                         <span class="price-value mbr-fonts-style display-5">
@@ -120,7 +120,7 @@
                 <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
                     <div class="plan-header text-center pt-5">
                         <h3 class="plan-title mbr-fonts-style display-5">
-                            2019/04/28
+                            2019/04/19
                         </h3>
                         <div class="plan-price">
                         <span class="price-value mbr-fonts-style display-5">
@@ -157,7 +157,7 @@
                 <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
                     <div class="plan-header text-center pt-5">
                         <h3 class="plan-title mbr-fonts-style display-5">
-                            2019/04/28
+                            2019/04/10
                         </h3>
                         <div class="plan-price">
                         <span class="price-value mbr-fonts-style display-5">
@@ -194,7 +194,7 @@
                 <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
                     <div class="plan-header text-center pt-5">
                         <h3 class="plan-title mbr-fonts-style display-5">
-                            2019/04/28
+                            2019/03/20
                         </h3>
                         <div class="plan-price">
                         <span class="price-value mbr-fonts-style display-5">

@@ -42,26 +42,15 @@ Route::get('scanning', function () {
     return view('/scanning');
 });
 
+/*優惠卷*/
+Route::get('coupon' ,['as' => 'coupon' , 'uses' => 'CouponController@index']);
+
 
 /*測試*/
-//Route::get('/555', function () {
-//    return view('index');
-//});
 Route::get('/5', function () {
     return view('auth.register3');
 });
 
-
-/*用餐紀錄*/
-Route::get('order/history' ,['as' => 'order.history' , 'uses' => 'OrderController@index']);
-
-/*會員QR*/
-Route::get('member/QRCode' ,['as' => 'member.QRCode' , 'uses' => 'MemberController@QR']);
-
-//掃描QR頁面*/
-Route::get('scanning', function () {
-    return view('/scanning');
-});
 
 
 /*會員登入部分*/

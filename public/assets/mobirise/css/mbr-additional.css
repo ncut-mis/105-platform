@@ -1922,3 +1922,109 @@ body {
     font-size: 4.25rem;
   }
 }
+.cid-roWi99jfvR {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-image: url("../../../assets/images/mbr-1920x1271.jpg");
+}
+.cid-roWi99jfvR h4 {
+  font-weight: 500;
+  color: #ffffff;
+}
+.cid-roWi99jfvR p {
+  color: #ffffff;
+}
+.cid-roWi99jfvR .card {
+  margin-bottom: 2rem;
+}
+.cid-roWi99jfvR .card-img {
+  border-radius: 0;
+  padding: 2rem 2rem 0 2rem;
+  background-color: #149dcc;
+}
+.cid-roWi99jfvR .card-img span {
+  font-size: 100px;
+  color: #ffffff;
+}
+.cid-roWi99jfvR .card-box {
+  padding-bottom: 2rem;
+  background-color: #149dcc;
+  background: linear-gradient(#149dcc, transparent);
+}
+.cid-roWi99jfvR .card-box .card-title {
+  margin: 0;
+  padding: 2rem 2rem 0 2rem;
+}
+.cid-roWi99jfvR .card-box .mbr-text {
+  margin-bottom: 0;
+  padding: 2rem 2rem 0 2rem;
+}
+.cid-roWi99jfvR .card-box .mbr-section-btn {
+  padding-top: 1rem;
+}
+.cid-roWi99jfvR .card-box .mbr-section-btn a {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.cid-roXq90UqiS {
+  padding-top: 75px;
+  padding-bottom: 105px;
+  background-color: #ffffff;
+}
+.cid-roXq90UqiS .mbr-slider .carousel-control {
+  background: #1b1b1b;
+}
+.cid-roXq90UqiS .mbr-slider .carousel-control-prev {
+  left: 0;
+  margin-left: 2.5rem;
+}
+.cid-roXq90UqiS .mbr-slider .carousel-control-next {
+  right: 0;
+  margin-right: 2.5rem;
+}
+.cid-roXq90UqiS .mbr-slider .modal-body .close {
+  background: #1b1b1b;
+}
+.cid-roXq90UqiS .mbr-gallery-item > div::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #554346;
+  opacity: 0;
+  -webkit-transition: 0.2s opacity ease-in-out;
+  transition: 0.2s opacity ease-in-out;
+  background: linear-gradient(to left, #554346, #45505b) !important;
+}
+.cid-roXq90UqiS .mbr-gallery-item > div:hover .mbr-gallery-title::before {
+  background: transparent !important;
+}
+.cid-roXq90UqiS .mbr-gallery-item > div:hover:before {
+  opacity: 0.7 !important;
+}
+.cid-roXq90UqiS .mbr-gallery-title {
+  font-size: .9em;
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem;
+  color: #fff;
+  z-index: 2;
+}
+.cid-roXq90UqiS .mbr-gallery-title:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  background: #554346 !important;
+  opacity: 0.7;
+  -webkit-transition: 0.2s background ease-in-out;
+  transition: 0.2s background ease-in-out;
+  background: linear-gradient(to left, #554346, #45505b) !important;
+}
