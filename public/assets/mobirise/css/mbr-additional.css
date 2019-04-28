@@ -1777,12 +1777,14 @@ body {
   background-image: url("../../../assets/images/50cafe-lightb3-2000x1333.jpg");
 }
 .cid-rohXKaKjuv {
-  background-image: url("../../../assets/images/02.jpg");
+  background-image: url("../../../assets/images/mbr-1920x1280.jpg");
 }
 .cid-rohXKaKjuv .form-container {
   transition: all .2s;
   border: 1px solid #ffffff;
   padding: 1rem;
+  background: linear-gradient(#073b4c, #073b4c);
+  border: none;
 }
 .cid-rohXKaKjuv .input-group-btn {
   justify-content: center;
@@ -1790,6 +1792,23 @@ body {
 }
 @media (min-width: 768px) {
   .cid-rohXKaKjuv .content-container {
+    padding-right: 5rem;
+  }
+}
+.cid-roPyfW0GBB {
+  background-image: url("../../../assets/images/02.jpg");
+}
+.cid-roPyfW0GBB .form-container {
+  transition: all .2s;
+  border: 1px solid #ffffff;
+  padding: 1rem;
+}
+.cid-roPyfW0GBB .input-group-btn {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+@media (min-width: 768px) {
+  .cid-roPyfW0GBB .content-container {
     padding-right: 5rem;
   }
 }

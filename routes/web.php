@@ -47,6 +47,9 @@ Route::get('scanning', function () {
 Route::get('/555', function () {
     return view('index');
 });
+Route::get('/5', function () {
+    return view('auth.register3');
+});
 
 
 /*用餐紀錄*/

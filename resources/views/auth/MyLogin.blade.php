@@ -1,10 +1,10 @@
 @extends('layouts.index')
 
 @section('content')
-    <section class="cid-rohXKaKjuv mbr-fullscreen mbr-parallax-background" id="header2-1">
+    <section class="cid-roPyfW0GBB mbr-fullscreen mbr-parallax-background" id="header2-1">
         <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(7, 59, 76);"></div>
 
-        <div class="container align-left">
+        <div class="container align-center">
             <div class="row">
                 <div class="mbr-white col-lg-8 col-md-7 content-container">
                     <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">

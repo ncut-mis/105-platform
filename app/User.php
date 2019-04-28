@@ -10,7 +10,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
-    protected $table = 'members';
+    protected $tables = 'members';
     /**
      * The attributes that are mass assignable.
      *
@@ -29,4 +29,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function customers(){
+        return $this->hasMany(CustomerEloquent::class);
+    }
+    public function member_coupons(){
+        return $this->hasMany(Member_couponsEloquent::class);
+    }
 }
