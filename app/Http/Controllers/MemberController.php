@@ -29,6 +29,6 @@ class MemberController extends Controller
         $member=Member::find(Auth::user()->id);
         $member->verification_code=$verification_code;
         $member->save();
-        return view('test');
+        return view('qrcode');
     }
 }
