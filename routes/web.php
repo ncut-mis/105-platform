@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 
@@ -44,9 +44,9 @@ Route::get('scanning', function () {
 
 
 /*測試*/
-Route::get('/555', function () {
-    return view('index');
-});
+//Route::get('/555', function () {
+//    return view('index');
+//});
 Route::get('/5', function () {
     return view('auth.register3');
 });

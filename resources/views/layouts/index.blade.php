@@ -37,12 +37,12 @@
         <div class="menu-logo">
             <div class="navbar-brand">
                 {{--<span class="navbar-logo">--}}
-                    {{--<a href="">--}}
-                         {{--<img src="assets/images/fork-122x122.png" alt="Mobirise" title="" style="height: 3.8rem;">--}}
-                    {{--</a>--}}
+                {{--<a href="">--}}
+                {{--<img src="assets/images/fork-122x122.png" alt="Mobirise" title="" style="height: 3.8rem;">--}}
+                {{--</a>--}}
                 {{--</span>--}}
                 <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4"
-                                                     href="">
+                                                     href="http://localhost:8008">
                         尚食併狂
                     </a></span>
             </div>
@@ -78,15 +78,18 @@
                                     class="mbri-sites mbr-iconfont mbr-iconfont-btn"></span>會員憑證</a></li>
                 </ul>
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"
-                                                               href="{{ route('logout') }}">
+                                                               href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                               document.getElementById('logout-form').submit();">
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+
                         <span class=" mbr-iconfont mbr-iconfont-btn "></span>
                         登出
                     </a></div>
             </div>
         @endguest
-
-
-
 
 
     </nav>
