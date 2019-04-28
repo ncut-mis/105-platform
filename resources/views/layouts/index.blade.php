@@ -70,7 +70,7 @@
                                     class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>搜尋餐廳</a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href=""><span
                                     class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span>點餐掃描</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href=""><span
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('order.history')}}"><span
                                     class="mbri-file mbr-iconfont mbr-iconfont-btn"></span>用餐紀錄</a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href=""><span
                                     class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>優惠卷</a></li>
