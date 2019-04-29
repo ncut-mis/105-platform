@@ -1,32 +1,29 @@
 <?php
 
 namespace App;
-
 use \App\Member as MemberEloquent;
 use \App\Order as OrderEloquent;
 use \App\Restaurant as RestaurantEloquent;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Customer extends Model
+class Customer extends Authenticatable
 {
-
-    protected $table = 'customers';
-
+    use Notifiable;
     protected $fillable = [
         'id',
         'restaurant_id',
         'member_id',
         'status',
     ];
-    public function order()
-    {
-        return $this->belongsTo(OrderEloquent::class);
-    }
     public function member(){
         return $this->belongsTo(MemberEloquent::class);
     }
-
+    public function order(){
+        return $this->hasMany(OrderEloquent::class);
+    }
     public function Restaurant(){
         return $this->belongsTo(RestaurantEloquent::class);
     }
+
 }

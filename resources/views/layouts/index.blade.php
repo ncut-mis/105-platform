@@ -74,7 +74,7 @@
                                     class="mbri-file mbr-iconfont mbr-iconfont-btn"></span>用餐紀錄</a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href=""><span
                                     class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>優惠卷</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('member.QRCode')}}"><span
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('Verification.Code.save')}}"><span
                                     class="mbri-sites mbr-iconfont mbr-iconfont-btn"></span>會員憑證</a></li>
                 </ul>
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"

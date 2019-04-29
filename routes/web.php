@@ -35,8 +35,8 @@ Route::get('restaurant/{id}/home' ,['as' => 'restaurant{id}.home' , 'uses' => 'R
 Route::get('order/history' ,['as' => 'order.history' , 'uses' => 'OrderController@index']);
 
 /*會員QR*/
+Route::get('member/Verification_Code/save' ,['as' => 'Verification.Code.save' , 'uses' => 'MemberController@VerificationCodeSave']);
 Route::get('member/QRCode' ,['as' => 'member.QRCode' , 'uses' => 'MemberController@QR']);
-
 //掃描QR頁面*/
 Route::get('scanning', function () {
     return view('/scanning');

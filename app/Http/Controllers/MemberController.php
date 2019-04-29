@@ -15,7 +15,7 @@ class MemberController extends Controller
 
         return view('history',$data);
     }
-    public function QR()
+    public function VerificationCodeSave()
     {
 
         $str = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-+=_,!@$#*%<>[]{}";
@@ -24,11 +24,13 @@ class MemberController extends Controller
         $verification_code = substr(str_shuffle($str), 0, 6);
         $member=Member::find(Auth::user()->id);
         $member->verification_code=$verification_code;
-
-        $verification_code = substr(str_shuffle($str), 0, 6);
-        $member=Member::find(Auth::user()->id);
-        $member->verification_code=$verification_code;
         $member->save();
+
+        return redirect()->route('member.QRCode');
+
+    }
+    public function QR()
+    {
         return view('qrcode');
     }
 }
