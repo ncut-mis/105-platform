@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="/assets/dropdown/css/style.css">
     <link rel="stylesheet" href="/assets/theme/css/style.css">
+    <link rel="stylesheet" href="/assets/gallery/style.css">
     <link rel="stylesheet" href="/assets/mobirise/css/mbr-additional.css" type="text/css">
 </head>
 <body>
@@ -66,7 +67,7 @@
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
                     <li class="nav-item"><a class="nav-link link text-white display-4" href=""><span
                                     class="mbri-user mbr-iconfont mbr-iconfont-btn"></span>會員資料</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{ route('restaurant') }}"><span
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="http://localhost:8008/restaurant/main"><span
                                     class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>搜尋餐廳</a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href=""><span
                                     class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span>點餐掃描</a></li>
@@ -105,7 +106,16 @@
 <script src="/assets/dropdown/js/script.min.js"></script>
 <script src="/assets/touchswipe/jquery.touch-swipe.min.js"></script>
 <script src="/assets/parallax/jarallax.min.js"></script>
+<script src="/assets/viewportchecker/jquery.viewportchecker.js"></script>
+<script src="/assets/masonry/masonry.pkgd.min.js"></script>
+<script src="/assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script>
+<script src="/assets/vimeoplayer/jquery.mb.vimeo_player.js"></script>
 <script src="/assets/theme/js/script.js"></script>
+<script src="/assets/gallery/player.min.js"></script>
+<script src="/assets/gallery/script.js"></script>
+<script src="/assets/slidervideo/script.js"></script>
+<script src="/assets/formoid/formoid.min.js"></script>
 
 </body>
 </html>
