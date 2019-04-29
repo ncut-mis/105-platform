@@ -31,37 +31,33 @@ Route::get('restaurant/search',['as' => 'restaurant.search' , 'uses' => 'Restaur
 Route::get('restaurant/{id}/home' ,['as' => 'restaurant{id}.home' , 'uses' => 'RestaurantController@home']);
 
 
+
+
 /*用餐紀錄*/
 Route::get('order/history' ,['as' => 'order.history' , 'uses' => 'OrderController@index']);
 
 /*會員QR*/
 Route::get('member/Verification_Code/save' ,['as' => 'Verification.Code.save' , 'uses' => 'MemberController@VerificationCodeSave']);
 Route::get('member/QRCode' ,['as' => 'member.QRCode' , 'uses' => 'MemberController@QR']);
+
+
+/*餐廳搜尋*/
+Route::get('restaurant/main', function () {
+    return view('/restaurant_main');
+});
+
 //掃描QR頁面*/
 Route::get('scanning', function () {
     return view('/scanning');
 });
+
+/*優惠卷*/
+Route::get('coupon' ,['as' => 'coupon' , 'uses' => 'CouponController@index']);
 
 
 /*測試*/
-//Route::get('/555', function () {
-//    return view('index');
-//});
-Route::get('/5', function () {
-    return view('auth.register3');
-});
 
 
-/*用餐紀錄*/
-Route::get('order/history' ,['as' => 'order.history' , 'uses' => 'OrderController@index']);
-
-/*會員QR*/
-Route::get('member/QRCode' ,['as' => 'member.QRCode' , 'uses' => 'MemberController@QR']);
-
-//掃描QR頁面*/
-Route::get('scanning', function () {
-    return view('/scanning');
-});
 
 
 /*會員登入部分*/
