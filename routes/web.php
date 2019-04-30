@@ -35,6 +35,7 @@ Route::get('restaurant/{id}/home' ,['as' => 'restaurant{id}.home' , 'uses' => 'R
 
 /*用餐紀錄*/
 Route::get('order/history' ,['as' => 'order.history' , 'uses' => 'OrderController@index']);
+Route::get('order/history/{id}' ,['as' => 'order.history.item' , 'uses' => 'OrderController@item']);
 
 /*會員QR*/
 Route::get('member/Verification_Code/save' ,['as' => 'Verification.Code.save' , 'uses' => 'MemberController@VerificationCodeSave']);
