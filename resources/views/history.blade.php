@@ -25,7 +25,7 @@
                         <div class="plan-list align-center">
                             <ul class="list-group list-group-flush mbr-fonts-style display-7">
                                 <li class="list-group-item mbr-bold">
-                                    hello world!
+
                                 </li>
                                 <li class="list-group-item mbr-bold">
                                     母親節優惠折10%
