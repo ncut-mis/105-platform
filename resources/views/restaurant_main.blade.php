@@ -1,25 +1,34 @@
 @extends('layouts.index')
+<head>
 
+    <script type="text/javascript">
+            function resres(n){
+                document.getElementById(n).submit();
+            }
+    </script>
+
+</head>
 @section('content')
 
     <section class="mbr-gallery mbr-slider-carousel mbr-fullscreen cid-roXq90UqiS" id="gallery2-i">
 
 
-        <div class="container">
-            <div>
-                <form method="get"  action="{{ route('restaurant.search') }}" >
-                    <div class="form-group">
-                        <div class="col-sm-6">
-                            <input type="text" name="booksearch" id="task-name" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-default">
-                            <i class="fa fa-plus"></i> 查詢
-                        </button>
-                        <button type="submit" class="btn btn-default">
-                            <i class="fa fa-plus"></i> 顯示全部
-                        </button>
+        <div class="container align-center">
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="form-container">
+                        <form method="get" action="{{ route('restaurant.search') }}">
+                            <div class="form-group">
+                                <input type="text" name="booksearch" id="task-name" class="form-control  px-3">
+                                <button type="submit" class="btn btn-secondary ">查詢/全部</button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
+            </div>
+
+            <div>
                 <div class="mbr-gallery-filter container gallery-filter-active">
                     <ul buttons="0">
                         <li class="mbr-gallery-filter-all">
@@ -33,23 +42,21 @@
                             <div>
 
                                 @foreach($restaurants as $rs)
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false"
-                                     data-tags="{{$rs->category}}">
-                                    <div href="#lb-gallery2-i" data-slide-to="0" data-toggle="modal">
-                                        <img src="{{url('img/logo/'. $rs->logo)}}" height="163" alt="" title="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">{{$rs->name}}</span>
+                                    <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false"
+                                         data-tags="{{$rs->category}}">
+
+                                        <form method="POST" action="{{route('restaurant{id}.home',$rs->id)}}" id="{{$rs->id}}">
+                                            {{ csrf_field() }}
+                                            {{ method_field('get') }}
+                                        </form>
+
+                                        <div  data-slide-to="0" data-toggle="modal" type="submit" onclick="resres({{$rs->id}});" id="submit">
+                                            <img src="{{url('img/logo/'. $rs->logo)}}" height="163" alt="" title="">
+                                            <span class="icon-focus"></span>
+                                            <span class="mbr-gallery-title mbr-fonts-style display-7">{{$rs->name}}</span>
+                                        </div>
                                     </div>
-                                    <form method="POST" action="{{route('restaurant{id}.home',$rs->id)}}">
-                                        {{ csrf_field() }}
-                                        {{ method_field('get') }}
-                                        <td style="text-align: center"> <button type="submit" class="btn btn-primary col-md-11 " style="font-family: 微軟正黑體; font-weight: bold;">
-                                                {{ __('前往') }}
-                                            </button>
-                                        </td>
-                                    </form>
-                                </div>
-                            @endforeach
+                                @endforeach
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -57,6 +64,7 @@
                 </div>
             </div>
         </div>
+
 
     </section>
 
