@@ -19,7 +19,7 @@ class RestaurantController extends Controller
         ]);
 
     }
-    public function search(Request $request)
+    public function searchp(Request $request)
     {
 
         $restaurants =Restaurant::where('name','like',"%".$request->booksearch."%")->get();
@@ -37,5 +37,15 @@ class RestaurantController extends Controller
 
 
         return view('restaurant',$data);
+    }
+
+    public function search(Request $request)
+    {
+        $restaurants = Restaurant::orderBy('id','ASC')
+            ->where('name','like',"%".$request->booksearch."%")
+            ->get();
+        $data = ['restaurants'=>$restaurants];
+        return View('restaurant_main',$data);
+
     }
 }

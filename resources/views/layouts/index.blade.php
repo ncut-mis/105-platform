@@ -67,7 +67,7 @@
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
                     <li class="nav-item"><a class="nav-link link text-white display-4" href=""><span
                                     class="mbri-user mbr-iconfont mbr-iconfont-btn"></span>會員資料</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href="http://localhost:8008/restaurant/main"><span
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('restaurant.search')}}"><span
                                     class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>搜尋餐廳</a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href=""><span
                                     class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span>點餐掃描</a></li>

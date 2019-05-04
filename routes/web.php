@@ -43,9 +43,7 @@ Route::get('member/QRCode' ,['as' => 'member.QRCode' , 'uses' => 'MemberControll
 
 
 /*餐廳搜尋*/
-Route::get('restaurant/main', function () {
-    return view('/restaurant_main');
-});
+Route::get('restaurant/main',['as' => 'restaurant.search' , 'uses' => 'RestaurantController@search']);
 
 //掃描QR頁面*/
 Route::get('scanning', function () {

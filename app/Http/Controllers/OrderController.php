@@ -11,8 +11,10 @@ class OrderController extends Controller
 
     public function index()
     {
-        $customers=Customer::where('member_id', Auth::user()->id)
-            ->join('orders','orders.customer_id','=','customers.id')
+        $customers=Order::join('customers','customers.id','=','orders.customer_id')
+
+            ->select('orders.id','orders.total','orders.StartTime')
+            ->where('customers.member_id',Auth::user()->id)
             ->get();
         $data = ['customers'=>$customers];
         return view('history',$data);
