@@ -9,7 +9,6 @@
 
 </head>
 @section('content')
-
     <section class="mbr-gallery mbr-slider-carousel mbr-fullscreen cid-roXq90UqiS" id="gallery2-i">
 
 
@@ -71,7 +70,7 @@
     <script src="/assets/web/assets/jquery/jquery.min.js"></script>
     <script src="/assets/popper/popper.min.js"></script>
     <script src="/assets/tether/tether.min.js"></script>
-    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    {{--<script src="/assets/bootstrap/js/bootstrap.min.js"></script>--}}
     <script src="/assets/smoothscroll/smooth-scroll.js"></script>
     <script src="/assets/dropdown/js/script.min.js"></script>
     <script src="/assets/touchswipe/jquery.touch-swipe.min.js"></script>
