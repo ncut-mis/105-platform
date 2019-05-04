@@ -53,7 +53,7 @@
                                         <div  data-slide-to="0" data-toggle="modal" type="submit" onclick="resres({{$rs->id}});" id="submit">
                                             <img src="{{url('img/logo/'. $rs->logo)}}" height="163" alt="" title="">
                                             <span class="icon-focus"></span>
-                                            <span class="mbr-gallery-title mbr-fonts-style display-7">{{$rs->name}}</span>
+                                            <span class="mbr-gallery-title mbr-fonts-style display-7 text-left">{{$rs->name}}</span>
                                         </div>
                                     </div>
                                 @endforeach
