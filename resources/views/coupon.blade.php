@@ -11,7 +11,7 @@
                 @foreach($coupons as $cs)
                 <div class="card  col-12 col-md-6 col-lg-4">
                     <div class="card-img">
-                            <img src="{{url($cs->photo)}}">
+                            <img src="{{url('img/coupon/'. $cs->photo)}}">
                     </div>
                     <div class="card-box align-center">
 
