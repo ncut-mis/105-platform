@@ -33,4 +33,12 @@ class MemberController extends Controller
     {
         return view('qrcode');
     }
+    public function scan()
+    {
+        return view('scanning');
+    }
+    public function person()
+    {
+        return view('personal');
+    }
 }

@@ -65,11 +65,11 @@
         @else
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href=""><span
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('personal')}}"><span
                                     class="mbri-user mbr-iconfont mbr-iconfont-btn"></span>會員資料</a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('restaurant.search')}}"><span
                                     class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>搜尋餐廳</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href=""><span
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('scanning')}}"><span
                                     class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span>點餐掃描</a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('order.history')}}"><span
                                     class="mbri-file mbr-iconfont mbr-iconfont-btn"></span>用餐紀錄</a></li>

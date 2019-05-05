@@ -46,12 +46,13 @@ Route::get('member/QRCode' ,['as' => 'member.QRCode' , 'uses' => 'MemberControll
 Route::get('restaurant/main',['as' => 'restaurant.search' , 'uses' => 'RestaurantController@search']);
 
 //掃描QR頁面*/
-Route::get('scanning', function () {
-    return view('/scanning');
-});
+Route::get('scanning', ['as' => 'scanning' , 'uses' => 'MemberController@scan']);
 
 /*優惠卷*/
 Route::get('coupon' ,['as' => 'coupon' , 'uses' => 'CouponController@index']);
+
+/*個人資料*/
+Route::get('personal' ,['as' => 'personal' , 'uses' => 'MemberController@person']);
 
 
 /*測試*/

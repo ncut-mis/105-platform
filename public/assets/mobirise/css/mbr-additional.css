@@ -2028,3 +2028,19 @@ body {
   transition: 0.2s background ease-in-out;
   background: linear-gradient(to left, #554346, #45505b) !important;
 }
+.cid-rpAdd4sLfp {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #000000;
+}
+.cid-rpAdd4sLfp .testimonial-text {
+  font-style: italic;
+  font-weight: 300;
+}
+.cid-rpAdd4sLfp .mbr-author-name {
+  font-weight: bold;
+}
+.cid-rpAdd4sLfp .media-container-row {
+  word-wrap: break-word;
+  word-break: break-word;
+}
