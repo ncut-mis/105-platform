@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Coupon;
 use Auth;
+
 class CouponController extends Controller
 {
     /**
@@ -15,7 +16,7 @@ class CouponController extends Controller
     {
         $coupons =Coupon::join('member_coupons','coupons.id','=','member_coupons.coupon_id')
             ->where('member_id',Auth::user()->id)
-            ->select('coupons.content','coupons.EndTime')
+            ->select('coupons.content','coupons.EndTime','coupons.title','coupons.photo')
             ->get();
         $data = ['coupons'=>$coupons];
         return view('coupon',$data);

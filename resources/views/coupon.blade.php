@@ -5,25 +5,24 @@
 
         <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(35, 35, 35);">
         </div>
-        @foreach($coupons as $cs)
+
         <div class="container">
             <div class="media-container-row row">
-
+                @foreach($coupons as $cs)
                 <div class="card  col-12 col-md-6 col-lg-4">
                     <div class="card-img">
-                            <img src="/img/coupon/1555345797.jpg">
+                            <img src="{{url($cs->photo)}}">
                     </div>
                     <div class="card-box align-center">
 
                         <h4 class="card-title mbr-fonts-style display-5">
 
-                            剩餘  {{$cs->EndTime}}  天
-
+                            剩餘  {{\Carbon\Carbon::now()->diffInDays($cs->EndTime, false) }}  天
 
                         </h4>
 
                         <p class="mbr-text mbr-fonts-style display-7">
-                            {{$cs->content}}
+                            {{$cs->title}}
                         </p>
                         <div class="mbr-section-btn text-center">
                             <a href="" class="btn btn-secondary display-4">
@@ -32,9 +31,10 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
-        @endforeach
+
     </section>
 @endsection
 
