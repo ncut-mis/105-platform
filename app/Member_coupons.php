@@ -15,6 +15,6 @@ class Member_coupons extends Model
         return $this->belongsTo(OrderEloquent::class);
     }
     public function coupon(){
-        return $this->hasOne(CouponEloquent::class);
+        return $this->belongsTo(CouponEloquent::class);
     }
 }

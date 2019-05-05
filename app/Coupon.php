@@ -13,7 +13,7 @@ class Coupon extends Model
     public function restaurant(){
         return $this->belongsTo(RestaurantEloquent::class);
     }
-    public function member_coupons(){
-        return $this->belongsTo(Member_couponsEloquent::class);
+    public function member_coupon(){
+        return $this->hasMany(Member_couponsEloquent::class);
     }
 }

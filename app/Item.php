@@ -7,10 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
+    protected $tables = 'items';
     public function order(){
         return $this->belongsTo(OrderEloquent::class);
     }
     public function meal(){
         return $this->belongsTo(MealEloquent::class);
     }
+
+
+
 }

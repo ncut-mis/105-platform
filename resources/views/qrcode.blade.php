@@ -2,14 +2,14 @@
 
 @section('content')
 
-    <section class="counters2 counters cid-roUkerX0B9" id="counters2-d">
+    <section class="counters2 counters mbr-fullscreen cid-roUkerX0B9" id="counters2-d">
         <div class="container ">
             <div class="media-container-row">
                 <div class="media-block" style="width: 50%;margin-top: 100px" >
 
                     <div class="mbr-figure align-center">
 
-                        {!! QrCode::size(400)->generate('http://localhost:8000/member/' . Auth::user()->id. '/verify/'. Auth::user()->verification_code ); !!}
+                        {!! QrCode::size(250)->generate('http://localhost:8000/member/' . Auth::user()->id. '/verify/'. Auth::user()->verification_code ); !!}
                         <p>http://localhost:8000/member/{{ Auth::user()->id }}/verify/{{ Auth::user()->verification_code }}</p>
 
                     </div>

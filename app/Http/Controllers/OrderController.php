@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Member_coupons;
 use App\Order;
 use Auth;
 use App\Customer;
 use App\Item;
+use phpDocumentor\Reflection\Types\Compound;
+use DB;
 
 class OrderController extends Controller
 {
@@ -16,7 +19,13 @@ class OrderController extends Controller
             ->select('orders.id','orders.total','orders.StartTime')
             ->where('customers.member_id',Auth::user()->id)
             ->get();
-        $data = ['customers'=>$customers];
+
+        $items =Item::all();
+
+        $coupons = Member_coupons::where('member_id',Auth::user()->id)->get();
+
+        $data = ['customers'=>$customers,'items'=>$items,'coupons'=>$coupons];
+
         return view('history',$data);
 
     }

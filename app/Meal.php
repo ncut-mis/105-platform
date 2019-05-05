@@ -9,10 +9,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Meal extends Model
 {
+
+    protected $tables = 'meals';
     protected $fillable = [
         'restaurant_id','name', 'photo', 'ingredients','price',
     ];
-    public function items(){
+    public function item(){
         return $this->hasMany(ItemEloquent::class);
     }
     public function restaurant(){
@@ -24,4 +26,5 @@ class Meal extends Model
     public function Category(){
         return $this->belongsTo(CategoryEloquent::class);
     }
+
 }
