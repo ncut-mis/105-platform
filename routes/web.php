@@ -50,6 +50,7 @@ Route::get('scanning', ['as' => 'scanning' , 'uses' => 'MemberController@scan'])
 
 /*優惠卷*/
 Route::get('coupon' ,['as' => 'coupon' , 'uses' => 'CouponController@index']);
+Route::get('coupon/{id}' ,['as' => 'coupon.index' , 'uses' => 'CouponController@edit']);
 
 /*個人資料*/
 Route::get('personal' ,['as' => 'personal' , 'uses' => 'MemberController@person']);

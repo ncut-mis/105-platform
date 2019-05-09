@@ -16,7 +16,7 @@ class CouponController extends Controller
     {
         $coupons =Coupon::join('member_coupons','coupons.id','=','member_coupons.coupon_id')
             ->where('member_id',Auth::user()->id)
-            ->select('coupons.content','coupons.EndTime','coupons.title','coupons.photo')
+            ->select('coupons.content','coupons.EndTime','coupons.title','coupons.photo','coupons.id')
             ->get();
         $data = ['coupons'=>$coupons];
         return view('coupon',$data);
@@ -62,7 +62,11 @@ class CouponController extends Controller
      */
     public function edit($id)
     {
-        //
+        $coupon = Coupon::join('restaurants','coupons.restaurant_id','=','restaurants.id')
+        ->select('restaurants.name','coupons.title','coupons.content','coupons.photo','coupons.discount','coupons.lowestprice','coupons.StartTime','Coupons.EndTime','coupons.status')
+        ->find($id);
+        $data = ['coupons' => $coupon];
+        return view('couponindex',$data);
     }
 
     /**

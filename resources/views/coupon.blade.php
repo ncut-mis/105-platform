@@ -25,7 +25,7 @@
                             {{$cs->title}}
                         </p>
                         <div class="mbr-section-btn text-center">
-                            <a href="" class="btn btn-secondary display-4">
+                            <a href="{{route('coupon.index',$cs->id)}}" class="btn btn-secondary display-4">
                                 打開優惠卷
                             </a>
                         </div>
