@@ -54,6 +54,8 @@ Route::get('coupon/{id}' ,['as' => 'coupon.index' , 'uses' => 'CouponController@
 
 /*個人資料*/
 Route::get('personal' ,['as' => 'personal' , 'uses' => 'MemberController@person']);
+Route::get('personal/{id}/edit' ,['as' => 'personal.modi' , 'uses' => 'MemberController@modi']);
+Route::patch('personal/{id}' ,['as' => 'personal.modi.update' , 'uses' => 'MemberController@modiupdate']);
 
 
 /*測試*/

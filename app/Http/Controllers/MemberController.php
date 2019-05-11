@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Auth;
 use App\Member;
-
+use Illuminate\Http\Request;
 class MemberController extends Controller
 {
 
@@ -39,6 +39,28 @@ class MemberController extends Controller
     }
     public function person()
     {
-        return view('personal');
+        $member = Member::orderBy('id','ASC')
+            ->where('id',Auth::user()->id)
+            ->get();
+        $data = ['member'=>$member];
+
+        return view('personal',$data);
+    }
+    public function modi($id)
+    {
+        $member = Member::find($id);
+        $data = ['member'=>$member];
+
+        return view('modi',$data);
+    }
+    public function modiupdate(Request $request,$id)
+    {
+        $member = Member::find($id);
+        $member->name=$request->name;
+        $member->birthday=$request->birthday;
+        $member->phone=$request->phone;
+        $member->address=$request->address;
+        $member->save();
+        return redirect()->route('personal')->with('success','修改成功 !');
     }
 }
