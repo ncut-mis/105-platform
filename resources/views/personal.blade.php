@@ -4,7 +4,6 @@
 
 
     <section class="testimonials2 cid-rpAdd4sLfp mbr-fullscreen" id="testimonials2-n">
-
         <div class="container">
             <div class="media-container-row">
                 <div class="mbr-figure pr-lg-5 col-md-6" style="margin-top:90px;">
@@ -27,6 +26,9 @@
                     </p>
                     <p class="mbr-author-desc mbr-fonts-style display-7">
                         {{$mb->email}}
+                    </p>
+                     <p class="mbr-author-desc mbr-fonts-style display-7">
+                        個人驗證碼：{{$mb->token}}
                     </p>
                     <div class="mbr-section-btn text-center pt-2">
                         <a href="{{route('personal.modi',$mb->id)}}" class="btn btn-primary display-4">修改個人資料</a>

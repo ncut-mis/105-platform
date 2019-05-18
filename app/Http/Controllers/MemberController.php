@@ -60,6 +60,7 @@ class MemberController extends Controller
         $member->birthday=$request->birthday;
         $member->phone=$request->phone;
         $member->address=$request->address;
+        $member->token=$request->token;
         $member->save();
         return redirect()->route('personal')->with('success','修改成功 !');
     }
