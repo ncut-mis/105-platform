@@ -8,10 +8,10 @@
             <div class="row justify-content-center">
                 <div class="mbr-white col-md-8">
                     <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1" style="margin-top: 80px">
-                        歡迎一起加入我們
+                        <font face="微軟正黑體">歡迎一起加入我們</font>
                     </h1>
                     <p class="mbr-text pb-3 mbr-fonts-style display-5">
-                        偶像劇女神邵雨薇，私底下是個「硬派女孩」，無論工作或是肌膚保養，都不放過任何細節。
+                        <font face="微軟正黑體">偶像劇女神邵雨薇，私底下是個「硬派女孩」，無論工作或是肌膚保養，都不放過任何細節。</font>
                     </p>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                             <form class="mbr-form" method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <p class="mbr-white mbr-bold mbr-text pb-3 mbr-fonts-style display-5">
-                                    註冊(Register)
+                                    <font face="微軟正黑體">註冊(Register)</font>
                                 </p>
                                 <div data-for="name">
                                     <div class="form-group row mbr-white">
@@ -90,7 +90,7 @@
                                 <span class="input-group-btn">
                                     <button type="submit" class="btn btn-form btn-success display-4">
                                         <span style="font-weight:bold">
-                                            註冊
+                                            <font face="微軟正黑體">註冊</font>
                                         </span>
                                     </button>
                                 </span>

@@ -8,10 +8,10 @@
             <div class="row">
                 <div class="mbr-white col-lg-8 col-md-7 content-container">
                     <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
-                        專為你設計
+                        <font face="微軟正黑體">專為你設計</font>
                     </h1>
                     <p class="mbr-text pb-3 mbr-fonts-style display-5">
-                        現在最多外國研究生就讀的學校，不是台成清交，而是出自技職的台灣科技大學。為其他國家培養大量人才，讓當地企業家感動之餘，一捐就價值30億台幣，為何台科大能大舉吸引海外優秀學生？
+                        <font face="微軟正黑體">現在最多外國研究生就讀的學校，不是台成清交，而是出自技職的台灣科技大學。為其他國家培養大量人才，讓當地企業家感動之餘，一捐就價值30億台幣，為何台科大能大舉吸引海外優秀學生？</font>
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-5">
@@ -20,7 +20,7 @@
                             <form class="mbr-form" method="POST" action="{{ route('login') }}">
                                 {{ csrf_field() }}
                                 <p class="mbr-white mbr-bold mbr-text pb-3 mbr-fonts-style display-5">
-                                   會員登入(Login)
+                                    <font face="微軟正黑體">會員登入(Login)</font>
                                 </p>
                                 <div data-for="email">
                                     <div class="form-group">
@@ -53,7 +53,7 @@
                                         </div>
                                 </div>
                                 <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-secondary btn-form display-4">登入</button>
+                                    <button type="submit" class="btn btn-secondary btn-form display-4"><font face="微軟正黑體">登入</font></button>
                                 </span>
                                 <div class="form-group">
                                     <div class="form-check">
