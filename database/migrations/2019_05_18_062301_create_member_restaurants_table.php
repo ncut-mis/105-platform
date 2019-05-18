@@ -14,7 +14,10 @@ class CreateMemberRestaurantsTable extends Migration
     public function up()
     {
         Schema::create('member_restaurants', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->unsignedInteger('restaurant_id');
+            $table->unsignedInteger('member_id');
+            $table->integer('status');
             $table->timestamps();
         });
     }
