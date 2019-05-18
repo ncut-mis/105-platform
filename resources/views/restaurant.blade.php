@@ -105,101 +105,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <li>
                     <h2>AMAZING  </h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipi est Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias phasellus mattis tellus .</p>
-                    <a href="#" class="more" data-toggle="modal" data-target="#myModal">Book a Table</a>
                 </li>
+            </ul>
+            @if(count($member_restaurants) <= 0))
 
+            <form action="{{ route('restaurant.subscribe') }}" method="POST">
+                {{ csrf_field() }}
+                <input name="restaurant_id" type="hidden" class="form-control" placeholder="請輸入狀態" value="{{$restaurant->id}}" required>
+                <input name="status" type="hidden" class="form-control" placeholder="請輸入狀態" value="1" required>
+                <button type="submit" class="btn btn-success">訂閱！</button>
+            </form>
+
+
+
+            @else
+                @foreach($member_restaurants as $mr)
+                    <form action="{{ route('restaurant.unsubscribe', $mr->id) }}" method="POST" onsubmit="return ConfirmDelete()">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <input name="restaurant_id" type="hidden" class="form-control" placeholder="請輸入狀態" value="{{$restaurant->id}}" required>
+                        <button  class="btn btn-danger"><i class="fa fa-trash"></i> 解除訂閱</button>
+                    </form>
+                @endforeach
+                @endif
+            <script>
+                function ConfirmDelete()
+                {
+                    var x = confirm("確定要解除我們餐廳的訂閱嗎，以後將再也收不到我們的優惠卷囉？");
+                    if (x)
+                        return true;
+                    else
+                        return false;
+                }
+            </script>
         </div>
-        <!-- modal -->
-        <div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Make Your Reservation Now</h4>
-                    </div>
-                    <div class="modal-body book-form">
-                        <form action="#" method="post">
-                            <div class="phone_email">
-                                <label>Full Name : </label>
-                                <div class="form-text">
-                                    <span class="fa fa-user" aria-hidden="true"></span>
-                                    <input type="text" name="Name" placeholder="Name" required="">
-                                </div>
-                            </div>
-                            <div class="phone_email phone_email1">
-                                <label>Email : </label>
-                                <div class="form-text">
-                                    <span class="fa fa-envelope" aria-hidden="true"></span>
-                                    <input type="text" name="email" placeholder="Email" required="">
-                                </div>
-                            </div>
-                            <div class="phone_email">
-                                <label>Phone Number : </label>
-                                <div class="form-text">
-                                    <span class="fa fa-phone" aria-hidden="true"></span>
-                                    <input type="text" name="Phone no" placeholder="Phone no" required="">
-                                </div>
-                            </div>
-                            <div class="phone_email phone_email1">
-                                <label>Address : </label>
-                                <div class="form-text">
-                                    <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                    <input type="text" name="address" placeholder="Your Address" required="">
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="agileits_reservation_grid">
-                                <div class="span1_of_1">
-                                    <label>Date : </label>
-                                    <div class="book_date">
-                                        <span class="fa fa-calendar" aria-hidden="true"></span>
-                                        <input class="date" id="datepicker" type="text" name="date" placeholder="mm/dd/yyyy" required="">
-                                    </div>
-                                </div>
-                                <div class="span1_of_1">
-                                    <!-- start_section_room -->
-                                    <label>Time : </label>
-                                    <div class="section_room">
-                                        <span class="fa fa-clock-o" aria-hidden="true"></span>
-                                        <select id="country" onchange="change_country(this.value)" class="frm-field required">
-                                            <option value="null">Lunch</option>
-                                            <option value="null">Dinner</option>
-                                            <option value="AX">Break Fast</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="span1_of_1">
-                                    <label>No.of People : </label>
-                                    <!-- start_section_room -->
-                                    <div class="section_room">
-                                        <span class="fa fa-users" aria-hidden="true"></span>
-                                        <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-                                            <option value="null">1 People</option>
-                                            <option value="null">2 People</option>
-                                            <option value="null">3 People</option>
-                                            <option value="AX">4 People</option>
-                                            <option value="AX">More</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <input type="submit" value="Book Now" />
-                        </form>
-                    </div>
-                    <!-- Calendar -->
-                    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}" />
-                    <script src="{{ asset('js/jquery-ui.js') }}"></script>
-                    <script>
-                        $(function() {
-                            $( "#datepicker" ).datepicker();
-                        });
-                    </script>
-                    <!-- //Calendar -->
-                </div>
-            </div>
-        </div>
-        <!-- //modal -->
+
+
         <!-- FlexSlider -->
         <script defer src="{{ asset('js/jquery.flexslider.js') }}"></script>
         <script type="text/javascript">
@@ -215,6 +156,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
     <!-- //banner-text -->
 </div>
+
 <!-- //banner -->
 <!-- welcome -->
 <div id="about" class="welcome">

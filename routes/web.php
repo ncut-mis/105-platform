@@ -29,6 +29,8 @@ Route::get('restaurant/search',['as' => 'restaurant.search' , 'uses' => 'Restaur
 
 /*餐廳頁面*/
 Route::get('restaurant/{id}/home' ,['as' => 'restaurant{id}.home' , 'uses' => 'RestaurantController@home']);
+Route::post('member_restaurant' ,['as' => 'restaurant.subscribe' , 'uses' => 'RestaurantController@restaurant_subscribe']);
+Route::delete('member_restaurant/{id}' ,['as' => 'restaurant.unsubscribe' , 'uses' => 'RestaurantController@restaurant_unsubscribe']);
 
 
 

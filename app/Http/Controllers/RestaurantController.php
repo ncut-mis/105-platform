@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Member_restaurant;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,10 @@ class RestaurantController extends Controller
         $meal=Meal::where('restaurant_id',$id)->get();
 
         $restaurant=Restaurant::find($id);
-        $data=['meals'=>$meal]+['restaurant'=>$restaurant];
+
+        $memebr_restaurants = Member_restaurant::where('member_id',Auth::user()->id)
+        ->where('restaurant_id',$id)->get();
+        $data=['meals'=>$meal]+['restaurant'=>$restaurant]+['member_restaurants' =>$memebr_restaurants];
 
 
         return view('restaurant',$data);
@@ -47,5 +51,23 @@ class RestaurantController extends Controller
         $data = ['restaurants'=>$restaurants];
         return View('restaurant_main',$data);
 
+    }
+
+    public function restaurant_subscribe(Request $request)
+    {
+        Member_restaurant::create([
+            'member_id' => Auth::user()->id,
+            'status' => 1,
+            'restaurant_id' =>$request['restaurant_id'],
+        ]);
+
+
+        return redirect()->route('restaurant{id}.home',$request['restaurant_id']);
+    }
+    public function restaurant_unsubscribe(Request $request,$id)
+    {
+        $restaurant_id = $request['restaurant_id'];
+        Member_restaurant::destroy($id);
+        return redirect()->route('restaurant{id}.home',$restaurant_id);
     }
 }
