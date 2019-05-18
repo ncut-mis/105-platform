@@ -61,13 +61,11 @@ class RestaurantController extends Controller
             'restaurant_id' =>$request['restaurant_id'],
         ]);
 
-
         return redirect()->route('restaurant{id}.home',$request['restaurant_id']);
     }
-    public function restaurant_unsubscribe(Request $request,$id)
+    public function destroy($id)
     {
-        $restaurant_id = $request['restaurant_id'];
         Member_restaurant::destroy($id);
-        return redirect()->route('restaurant{id}.home',$restaurant_id);
+        return redirect()->route('favorite');
     }
 }

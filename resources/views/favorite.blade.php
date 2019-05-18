@@ -13,23 +13,23 @@
                         <form action="{{ route('restaurant.unsubscribe', $mr->id) }}" method="POST" onsubmit="return ConfirmDelete()">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <input name="restaurant_id" type="hidden" class="form-control" placeholder="請輸入狀態" value="{{$mr->id}}" required>
-                            <button  class="btn"><i class="fa fa-trash"></i> 解除訂閱</button>
+                            <button class="btn btn-danger">取消訂閱</button>
                         </form>
                     @endforeach
-                    <script>
-                        function ConfirmDelete()
-                        {
-                            var x = confirm("確定要解除我們餐廳的訂閱嗎，以後將再也收不到我們的優惠卷囉？");
-                            if (x)
-                                return true;
-                            else
-                                return false;
-                        }
-                    </script>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        function ConfirmDelete()
+        {
+            var x = confirm("確定要取消我們餐廳的訂閱嗎，以後將再也收不到我們的優惠卷囉？");
+            if (x)
+                return true;
+            else
+                return false;
+        }
+    </script>
 
 @endsection

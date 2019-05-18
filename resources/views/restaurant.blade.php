@@ -79,17 +79,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <h1><a  href="#">{{$restaurant->name }}</a></h1>
+                    <h1><a  href="#"><img src="{{url('img/logo/'. $restaurant->logo)}}" width=50%></a></h1>
                 </div>
                 <!-- navbar-header -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#about" class="scroll">About</a></li>
-                        <li><a href="#menu" class="scroll">Menu</a></li>
-                        <li><a href="#team" class="scroll">Team</a></li>
-                        <li><a href="#gallery" class="scroll">Gallery</a></li>
-                        <li><a href="#contact" class="scroll">Contact Us</a></li>
+                        <li><a href="#" class="active"><b>Home</b></a></li>
+                        <li><a href="#about" class="scroll"><b>About</b></a></li>
+                        <li><a href="#menu" class="scroll"><b>Menu</b></a></li>
+                        <li><a href="#team" class="scroll"><b>Team</b></a></li>
+                        <li><a href="#gallery" class="scroll"><b>Gallery</b></a></li>
+                        <li><a href="#contact" class="scroll"><b>Contact Us</b></a></li>
                     </ul>
                     <div class="clearfix"> </div>
                 </div>
@@ -103,41 +103,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div >
             <ul class="slides">
                 <li>
-                    <h2>AMAZING  </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipi est Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias phasellus mattis tellus .</p>
+                    <h2>歡樂美味　盡在西堤</h2>
+                    <p></p>
+                    <h3><b>Let's TASTy</b></h3>
+                    <h3><b>Let's ENJOY</b></h3>
                 </li>
             </ul>
-            @if(count($member_restaurants) <= 0))
+            @if(count($member_restaurants) <= 0)
+                <form action="{{ route('restaurant.subscribe') }}" method="POST">
+                    {{ csrf_field() }}
+                    <input name="restaurant_id" type="hidden" class="form-control" value="{{$restaurant->id}}" required>
+                    <input name="status" type="hidden" class="form-control" value="1" required>
+                    <button type="submit" class="btn btn-success">訂閱！</button>
+                </form>
 
-            <form action="{{ route('restaurant.subscribe') }}" method="POST">
-                {{ csrf_field() }}
-                <input name="restaurant_id" type="hidden" class="form-control" placeholder="請輸入狀態" value="{{$restaurant->id}}" required>
-                <input name="status" type="hidden" class="form-control" placeholder="請輸入狀態" value="1" required>
-                <button type="submit" class="btn btn-success">訂閱！</button>
-            </form>
-
-
-
-            @else
-                @foreach($member_restaurants as $mr)
-                    <form action="{{ route('restaurant.unsubscribe', $mr->id) }}" method="POST" onsubmit="return ConfirmDelete()">
-                        {{ csrf_field() }}
-                        {{ method_field('DELETE') }}
-                        <input name="restaurant_id" type="hidden" class="form-control" placeholder="請輸入狀態" value="{{$restaurant->id}}" required>
-                        <button  class="btn btn-danger"><i class="fa fa-trash"></i> 解除訂閱</button>
-                    </form>
-                @endforeach
-                @endif
-            <script>
-                function ConfirmDelete()
-                {
-                    var x = confirm("確定要解除我們餐廳的訂閱嗎，以後將再也收不到我們的優惠卷囉？");
-                    if (x)
-                        return true;
-                    else
-                        return false;
-                }
-            </script>
+            @elseif(count($member_restaurants) >= 0)
+                    <button class="btn btn-success" disabled>已訂閱</button>
+            @endif
         </div>
 
 
@@ -184,25 +166,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-md-6 welcome-right">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus tellus, sodales id elit a, feugiat porttitor nulla. Sed porta magna vitae nisl vulputate lacinia. Morbi malesuada sollicitudin tortor, vitae pharetra nunc lacinia eget. Nulla ornare purus nunc, ut dapibus leo sodales adipiscing. Praesent sit amet justo diam. Quisque sagittis egestas sem vitae vestibulum. Quisque nec lacus ornare, volutpat arcu in lacinia dolor Itaque earum rerum hic tenetur a sapiente delectus . </p>
                 <div class="open-hours-row">
-                    <div class="col-md-3 open-hours-left">
+                    <div class="col-md-4 open-hours-left">
                         <h4>OPENING HOURS </h4>
+                        <h4> </h4>
                     </div>
-                    <div class="col-md-3 open-hours-left">
-                        <h6>BREAKFAST</h6>
-                        <h5>7am - 12am</h5>
+                    <div class="col-md-4 open-hours-left">
+                        <h6>午餐</h6>
+                        <h5>11:30-14:30</h5>
                     </div>
-                    <div class="col-md-3 open-hours-left">
-                        <h6>MAIN MENU</h6>
-                        <h5>12am - 12pm</h5>
+                    <div class="col-md-4 open-hours-left">
+                        <h6>晚餐</h6>
+                        <h5>17:30-22:00</h5>
                     </div>
-                    <div class="col-md-3 open-hours-left">
-                        <h6>SPECIALS</h6>
-                        <h5>8pm - 11pm</h5>
-                    </div>
-                    <div class="clearfix"> </div>
+{{--                    <div class="col-md-3 open-hours-left">--}}
+{{--                        <h6>SPECIALS</h6>--}}
+{{--                        <h5>8pm - 11pm</h5>--}}
+{{--                    </div>--}}
+                    <div class="clearfix"></div>
                 </div>
             </div>
-            <div class="clearfix"> </div>
+{{--            <div class="clearfix"> </div>--}}
         </div>
     </div>
 </div>
@@ -212,7 +195,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="container">
         <h4>Today Special</h4>
         <h5>50% <span>Offer</span></h5>
-        <p>In malesuada accumsan felis, a imperdiet arcu blandit sed. Ut id faucibus eros. Fusce sed vulputate dui, non consectetur felis. Etiam id enim sem. Suspendisse commodo tempor magna </p>
+{{--        <p>In malesuada accumsan felis, a imperdiet arcu blandit sed. Ut id faucibus eros. Fusce sed vulputate dui, non consectetur felis. Etiam id enim sem. Suspendisse commodo tempor magna </p>--}}
     </div>
 </div>
 <!-- //slid -->

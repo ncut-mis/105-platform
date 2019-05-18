@@ -30,7 +30,6 @@ Route::get('restaurant/search',['as' => 'restaurant.search' , 'uses' => 'Restaur
 /*餐廳頁面*/
 Route::get('restaurant/{id}/home' ,['as' => 'restaurant{id}.home' , 'uses' => 'RestaurantController@home']);
 Route::post('member_restaurant' ,['as' => 'restaurant.subscribe' , 'uses' => 'RestaurantController@restaurant_subscribe']);
-Route::delete('member_restaurant/{id}' ,['as' => 'restaurant.unsubscribe' , 'uses' => 'RestaurantController@restaurant_unsubscribe']);
 
 
 
@@ -61,6 +60,7 @@ Route::patch('personal/{id}' ,['as' => 'personal.modi.update' , 'uses' => 'Membe
 
 /*我的最愛*/
 Route::get('favorite' ,['as' => 'favorite' , 'uses' => 'MemberRestaurantController@index']);
+Route::delete('member_restaurant/{id}' ,['as' => 'restaurant.unsubscribe' , 'uses' => 'RestaurantController@destroy']);
 
 /*測試*/
 
