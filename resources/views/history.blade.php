@@ -17,7 +17,7 @@
                             $
                         </span>
                                 <span class="price-figure mbr-fonts-style display-1">
-                              {{$cs->total}}
+                                    {{$cs->total}}
                             </span>
                             </div>
                         </div>
@@ -33,14 +33,14 @@
                                         @foreach($items as $item)
                                             @if($num<4)
                                                 @if($cs->id == $item->order_id)
-                                                    {{$item->meal->name}}
+                                                    <font face="微軟正黑體">{{$item->meal->name}}</font>
                                                     <br>
                                                     @php($num++)
                                                 @endif
                                             @endif
                                         @endforeach
                                         @for($i=$num;$i<4;$i++)
-                                            <font color="#E9E6E6">{{'-無品項-'}}</font>
+                                            <font color="#E9E6E6" face="微軟正黑體">{{'-無品項-'}}</font>
                                             <br>
                                         @endfor
 
@@ -48,19 +48,19 @@
                                     <li class="list-group-item mbr-bold">
                                         @foreach($coupons as $coupon)
                                             @if($coupon->order_id==$cs->id)
-                                                {{$coupon->coupon->title}}
+                                                <font face="微軟正黑體">{{$coupon->coupon->title}}</font>
                                                 @php($num2++)
                                             @endif
                                         @endforeach
                                         @if($num2<1)
-                                            <font color="#E9E6E6">{{'-無使用優惠卷-'}}</font>
+                                            <font color="#E9E6E6" face="微軟正黑體">{{'-無使用優惠卷-'}}</font>
                                         @endif
 
                                     </li>
                                 </ul>
                             </div>
                             <div class="mbr-section-btn text-center pt-2">
-                                <a href="{{ route('order.history.item',$cs->id) }}" class="btn btn-primary display-4">詳細資訊</a>
+                                <a href="{{ route('order.history.item',$cs->id) }}" class="btn btn-primary display-4"><font face="微軟正黑體">詳細資訊</font></a>
                             </div>
                         </div>
                     </div>

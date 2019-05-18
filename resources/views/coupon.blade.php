@@ -17,16 +17,16 @@
 
                         <h4 class="card-title mbr-fonts-style display-5">
 
-                            剩餘  {{\Carbon\Carbon::now()->diffInDays($cs->EndTime, false) }}  天
+                            <font face="微軟正黑體">剩餘  {{\Carbon\Carbon::now()->diffInDays($cs->EndTime, false) }}  天</font>
 
                         </h4>
 
                         <p class="mbr-text mbr-fonts-style display-7">
-                            {{$cs->title}}
+                            <font face="微軟正黑體">{{$cs->title}}</font>
                         </p>
                         <div class="mbr-section-btn text-center">
                             <a href="{{route('coupon.index',$cs->id)}}" class="btn btn-secondary display-4">
-                                打開優惠卷
+                                <font face="微軟正黑體">打開優惠卷</font>
                             </a>
                         </div>
                     </div>

@@ -20,7 +20,7 @@
                         <form method="get" action="{{ route('restaurant.search') }}">
                             <div class="form-group">
                                 <input type="text" name="booksearch" id="task-name" class="form-control  px-3">
-                                <button type="submit" class="btn btn-secondary ">查詢/全部</button>
+                                <button type="submit" class="btn btn-secondary "><font face="微軟正黑體">查詢/全部</font></button>
                             </div>
                         </form>
                     </div>
@@ -31,7 +31,7 @@
                 <div class="mbr-gallery-filter container gallery-filter-active">
                     <ul buttons="0">
                         <li class="mbr-gallery-filter-all">
-                            <a class="btn btn-md btn-success-outline active display-7" href="">全部</a>
+                            <a class="btn btn-md btn-success-outline active display-7" href=""><font face="微軟正黑體">全部</font></a>
                         </li>
                     </ul>
                 </div>
@@ -52,10 +52,11 @@
                                         <div  data-slide-to="0" data-toggle="modal" type="submit" onclick="resres({{$rs->id}});" id="submit">
                                             <img src="{{url('img/logo/'. $rs->logo)}}" height="163" alt="" title="">
                                             <span class="icon-focus"></span>
-                                            <span class="mbr-gallery-title mbr-fonts-style display-7 text-left">{{$rs->name}}</span>
+                                            <span class="mbr-gallery-title mbr-fonts-style display-7 text-left"><font face="微軟正黑體">{{$rs->name}}</font></span>
                                         </div>
                                     </div>
                                 @endforeach
+
                             </div>
                             <div class="clearfix"></div>
                         </div>

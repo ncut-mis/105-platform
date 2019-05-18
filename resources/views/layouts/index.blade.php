@@ -44,7 +44,7 @@
                 {{--</span>--}}
                 <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4"
                                                      href="http://localhost:8008">
-                        尚食併狂
+                        <font face="微軟正黑體"><h3>尚食併狂</h3></font>
                     </a></span>
             </div>
         </div>
@@ -54,29 +54,29 @@
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"
                                                                href="{{ route('register') }}">
                         <span class=" mbr-iconfont mbr-iconfont-btn "></span>
-                        註冊
+                        <font face="微軟正黑體">註冊</font>
                     </a></div>
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"
                                                                href="{{ route('login.create') }}">
                         <span class=" mbr-iconfont mbr-iconfont-btn "></span>
-                        登入
+                        <font face="微軟正黑體">登入</font>
                     </a></div>
             </div>
         @else
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('personal')}}"><span
-                                    class="mbri-user mbr-iconfont mbr-iconfont-btn"></span>會員資料</a></li>
+                                    class="mbri-user mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">會員資料</font></a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('restaurant.search')}}"><span
-                                    class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>搜尋餐廳</a></li>
+                                    class="mbri-home mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">搜尋餐廳</font></a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('scanning')}}"><span
-                                    class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span>點餐掃描</a></li>
+                                    class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">點餐掃描</font></a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('order.history')}}"><span
-                                    class="mbri-file mbr-iconfont mbr-iconfont-btn"></span>用餐紀錄</a></li>
+                                    class="mbri-file mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">用餐紀錄</font></a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('coupon')}}"><span
-                                    class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>優惠卷</a></li>
+                                    class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">優惠卷</font></a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('Verification.Code.save')}}"><span
-                                    class="mbri-sites mbr-iconfont mbr-iconfont-btn"></span>會員憑證</a></li>
+                                    class="mbri-sites mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">會員憑證</font></a></li>
                 </ul>
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"
                                                                href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -87,7 +87,7 @@
                         </form>
 
                         <span class=" mbr-iconfont mbr-iconfont-btn "></span>
-                        登出
+                        <font face="微軟正黑體">登出</font>
                     </a></div>
             </div>
         @endguest
