@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
 use App\Member_restaurant;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,11 @@ class MemberRestaurantController extends Controller
      */
     public function index()
     {
-        //
+        $member_restaurants = Member_restaurant::join('restaurants','restaurants.id','=','member_restaurants.restaurant_id')
+        ->where('member_restaurants.member_id',Auth::user()->id)
+        ->get();
+        $data = ['member_restaurants'=>$member_restaurants];
+        return view('favorite',$data);
     }
 
     /**

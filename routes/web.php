@@ -59,6 +59,8 @@ Route::get('personal' ,['as' => 'personal' , 'uses' => 'MemberController@person'
 Route::get('personal/{id}/edit' ,['as' => 'personal.modi' , 'uses' => 'MemberController@modi']);
 Route::patch('personal/{id}' ,['as' => 'personal.modi.update' , 'uses' => 'MemberController@modiupdate']);
 
+/*我的最愛*/
+Route::get('favorite' ,['as' => 'favorite' , 'uses' => 'MemberRestaurantController@index']);
 
 /*測試*/
 
