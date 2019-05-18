@@ -3,6 +3,7 @@
 namespace App;
 use \App\Customer as CustomerEloquent;
 use \App\Member_coupons as Member_couponsEloquent;
+use \App\Member_restaurant as Member_restaurantsEloquent;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -34,6 +35,9 @@ class Member extends Authenticatable
     }
     public function member_coupons(){
         return $this->hasMany(Member_couponsEloquent::class);
+    }
+    public function member_restaurants(){
+        return $this->hasMany(Member_restaurantsEloquent::class);
     }
 }
 
