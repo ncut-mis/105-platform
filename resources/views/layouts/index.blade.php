@@ -43,7 +43,7 @@
                 {{--</a>--}}
                 {{--</span>--}}
                 <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4"
-                                                     href="http://localhost:8008">
+                                                     href="/">
                         <font face="微軟正黑體"><h3>尚食併狂</h3></font>
                     </a></span>
             </div>
@@ -51,6 +51,14 @@
 
         @guest
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('restaurant.search')}}"><span
+                                    class="mbri-home mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">搜尋餐廳</font></a></li>
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('scanning')}}"><span
+                                    class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">點餐掃描</font></a></li>
+
+                </ul>
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"
                                                                href="{{ route('register') }}">
                         <span class=" mbr-iconfont mbr-iconfont-btn "></span>
