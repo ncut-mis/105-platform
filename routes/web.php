@@ -63,7 +63,7 @@ Route::patch('personal/{id}' ,['as' => 'personal.modi.update' , 'uses' => 'Membe
 Route::get('favorite' ,['as' => 'favorite' , 'uses' => 'MemberRestaurantController@index']);
 
 /*測試*/
-
+Route::get('/000', function () {return view('test');});
 
 
 
