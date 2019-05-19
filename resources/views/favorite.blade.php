@@ -3,19 +3,27 @@
 @section('content')
 
 
-    <section class="testimonials2 cid-rpAdd4sLfp mbr-fullscreen" id="testimonials2-n">
+    <section class="testimonials2 cid-roVOPuBJb3 mbr-fullscreen" id="testimonials2-n">
         <div class="container">
             <div class="media-container-row">
                 <div class="media-content px-3 align-self-center mbr-white py-2  col-md-6">
-                    訂閱餐廳列表：<br>
-                    @foreach($member_restaurants as $mr)
-                        {{$mr->name}}
-                        <form action="{{ route('restaurant.unsubscribe', $mr->id) }}" method="POST" onsubmit="return ConfirmDelete()">
-                            {{ csrf_field() }}
-                            {{ method_field('DELETE') }}
-                            <button class="btn btn-danger">取消訂閱</button>
-                        </form>
-                    @endforeach
+                    <div class="col-md-10">
+                        <div class="card" style="text-align:center">
+                            <div class="card-header" style="text-align:center;background-color: lightgray">
+                                <font face="微軟正黑體" color="black" size="5"><b><span class="mbri-link mbr-iconfont mbr-iconfont-btn"></span> 訂閱餐廳列表 <span class="mbri-link mbr-iconfont mbr-iconfont-btn"></span></b></font>
+                            </div>
+                            <div class="card-body" style="text-align:center;background-color: lavender">
+                                @foreach($member_restaurants as $mr)
+                                    <font face="微軟正黑體" color="black" size="5"><b>{{$mr->name}}</b></font>
+                                    <form action="{{ route('restaurant.unsubscribe', $mr->id) }}" method="POST" onsubmit="return ConfirmDelete()">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button class="btn btn-info"><b><span class="mbri-unlink mbr-iconfont mbr-iconfont-btn "></span></b><font face="微軟正黑體">  取消訂閱</font></button>
+                                    </form>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

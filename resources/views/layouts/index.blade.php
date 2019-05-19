@@ -53,24 +53,24 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"
                                                                href="{{ route('register') }}">
-                        <span class=" mbr-iconfont mbr-iconfont-btn "></span>
+                        <span class="mbri-edit mbr-iconfont mbr-iconfont-btn "></span>
                         <font face="微軟正黑體">註冊</font>
                     </a></div>
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"
                                                                href="{{ route('login.create') }}">
-                        <span class=" mbr-iconfont mbr-iconfont-btn "></span>
+                        <span class="mbri-login mbr-iconfont mbr-iconfont-btn "></span>
                         <font face="微軟正黑體">登入</font>
                     </a></div>
             </div>
         @else
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('favorite')}}"><span
-                                    class="mbri-user mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">我的最愛</font></a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('personal')}}"><span
                                     class="mbri-user mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">會員資料</font></a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('restaurant.search')}}"><span
                                     class="mbri-home mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">搜尋餐廳</font></a></li>
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('favorite')}}"><span
+                                    class="mbri-hearth mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">我的最愛</font></a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('scanning')}}"><span
                                     class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">點餐掃描</font></a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('order.history')}}"><span
@@ -88,7 +88,7 @@
                             @csrf
                         </form>
 
-                        <span class=" mbr-iconfont mbr-iconfont-btn "></span>
+                        <span class="mbri-logout mbr-iconfont mbr-iconfont-btn "></span>
                         <font face="微軟正黑體">登出</font>
                     </a></div>
             </div>

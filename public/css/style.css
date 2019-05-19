@@ -202,7 +202,7 @@ p {
 }
 .open-hours-left:nth-child(3) {
     border-left: 2px dashed #ff8c00;
-    border-right: 2px dashed #ff8c00;
+    border-right: 0px dashed #ff8c00;
 }
 .open-hours-left h4 {
     font-size: 1.5em;

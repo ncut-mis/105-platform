@@ -114,11 +114,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     {{ csrf_field() }}
                     <input name="restaurant_id" type="hidden" class="form-control" value="{{$restaurant->id}}" required>
                     <input name="status" type="hidden" class="form-control" value="1" required>
-                    <button type="submit" class="btn btn-success">訂閱！</button>
+                    <font face="微軟正黑體"><button type="submit" class="btn btn-success">訂閱！</button></font>
                 </form>
 
             @elseif(count($member_restaurants) >= 0)
-                    <button class="btn btn-success" disabled>已訂閱</button>
+                <font face="微軟正黑體"><button class="btn btn-success" disabled>已訂閱</button></font>
             @endif
         </div>
 
@@ -168,20 +168,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="open-hours-row">
                     <div class="col-md-4 open-hours-left">
                         <h4>OPENING HOURS </h4>
-                        <h4> </h4>
                     </div>
                     <div class="col-md-4 open-hours-left">
-                        <h6>午餐</h6>
-                        <h5>11:30-14:30</h5>
+                        <h5><font face="微軟正黑體">午餐</font></h5>
+                        <br>
+                        <h6>11:30-14:30</h6>
                     </div>
                     <div class="col-md-4 open-hours-left">
-                        <h6>晚餐</h6>
-                        <h5>17:30-22:00</h5>
+                        <h5><font face="微軟正黑體">晚餐</font></h5>
+                        <h6>17:30-22:00</h6>
                     </div>
-{{--                    <div class="col-md-3 open-hours-left">--}}
-{{--                        <h6>SPECIALS</h6>--}}
-{{--                        <h5>8pm - 11pm</h5>--}}
-{{--                    </div>--}}
                     <div class="clearfix"></div>
                 </div>
             </div>

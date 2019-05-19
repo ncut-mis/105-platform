@@ -66,6 +66,6 @@ class RestaurantController extends Controller
     public function destroy($id)
     {
         Member_restaurant::destroy($id);
-        return redirect()->route('favorite');
+        return redirect()->back();
     }
 }

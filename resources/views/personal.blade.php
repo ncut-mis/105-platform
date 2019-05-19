@@ -17,24 +17,26 @@
                         <div class="alert alert-danger">{{session('error')}}</div>
                     @endif
                     <p class="mbr-text testimonial-text mbr-fonts-style display-7">
-                       birth：{{$mb->birthday}}<br>
+                        birth：{{$mb->birthday}}<br>
                         phone：{{$mb->phone}}<br>
-                        address：{{$mb->address}}
+                        address：<font face="微軟正黑體">{{$mb->address}}</font>
                     </p>
                     <p class="mbr-author-name pt-4 mb-2 mbr-fonts-style display-7">
-                        {{$mb->name}}
+                        <font face="微軟正黑體">{{$mb->name}}</font>
                     </p>
                     <p class="mbr-author-desc mbr-fonts-style display-7">
-                        {{$mb->email}}
+                        <font face="微軟正黑體">{{$mb->email}}</font>
                     </p>
                      <p class="mbr-author-desc mbr-fonts-style display-7">
-                        個人驗證碼：{{$mb->token}}
+                         <font face="微軟正黑體">個人驗證碼：{{$mb->token}}</font>
                     </p>
                     <div class="mbr-section-btn text-center pt-2">
-                        <a href="{{route('personal.modi',$mb->id)}}" class="btn btn-primary display-4">修改個人資料</a>
+                        <a href="{{route('personal.modi',$mb->id)}}" class="btn btn-primary display-4">
+                            <font face="微軟正黑體"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn "></span> 修改個人資料</font>
+                        </a>
                     </div>
                 </div>
-                    @endforeach
+                @endforeach
             </div>
         </div>
     </section>

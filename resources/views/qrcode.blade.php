@@ -15,7 +15,7 @@
                     </div>
 
                     <h3 class="mbr-section-title mbr-bold pt-5 align-center mbr-fonts-style display-5">
-                        餐廳讀取你的行動條碼後，即可確認你的會員身分。
+                        <font face="微軟正黑體">餐廳讀取行動條碼後，即可確認您的會員身分</font>
                     </h3>
                 </div>
             </div>
