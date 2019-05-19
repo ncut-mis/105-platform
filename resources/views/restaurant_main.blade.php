@@ -19,8 +19,8 @@
                     <div class="form-container">
                         <form method="get" action="{{ route('restaurant.search') }}">
                             <div class="form-group">
-                                <input type="text" name="booksearch" id="task-name" class="form-control  px-3">
-                                <button type="submit" class="btn btn-secondary "><font face="微軟正黑體">查詢/全部</font></button>
+                                <input type="text" name="booksearch" id="task-name" class="form-control  px-3" placeholder="請輸入查詢關鍵字">
+                                <button type="submit" class="btn btn-secondary "><font face="微軟正黑體"><span class="mbri-search mbr-iconfont mbr-iconfont-btn "></span>查詢/全部</font></button>
                             </div>
                         </form>
                     </div>

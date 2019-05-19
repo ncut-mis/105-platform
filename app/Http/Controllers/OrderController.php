@@ -31,10 +31,21 @@ class OrderController extends Controller
     }
     public function item($id)
     {
+        $customers=Order::join('customers','customers.id','=','orders.customer_id')
+            ->select('orders.id','orders.total','orders.StartTime')
+            ->where('customers.member_id',Auth::user()->id)
+            ->get();
+
+        $coupons = Member_coupons::where('member_id',Auth::user()->id)->get();
+
         $item = Item::join('meals','items.meal_id','=','meals.id')
             ->where('order_id',$id)
             ->get();
-        $data = ['items' => $item];
+
+        $order=Order::find($id);
+
+        $data = ['customers'=>$customers,'items'=>$item,'coupons'=>$coupons,'orders'=>$order];
+
         return view('items', $data);
 
     }
