@@ -63,7 +63,7 @@ Route::get('favorite' ,['as' => 'favorite' , 'uses' => 'MemberRestaurantControll
 Route::delete('member_restaurant/{id}' ,['as' => 'restaurant.unsubscribe' , 'uses' => 'RestaurantController@destroy']);
 
 /*測試*/
-
+Route::get('/000', function () {return view('test');});
 
 
 
