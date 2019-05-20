@@ -53,7 +53,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
 
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('restaurant.search')}}"><span
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('restaurant.search_nom')}}"><span
                                     class="mbri-home mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">搜尋餐廳</font></a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('scanning')}}"><span
                                     class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">點餐掃描</font></a></li>

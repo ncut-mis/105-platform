@@ -29,7 +29,7 @@ class RestaurantController extends Controller
 
     }
 
-    public function home($id)
+    public function home_1($id)
     {
         $meal=Meal::where('restaurant_id',$id)->get();
 
@@ -39,18 +39,38 @@ class RestaurantController extends Controller
         ->where('restaurant_id',$id)->get();
         $data=['meals'=>$meal]+['restaurant'=>$restaurant]+['member_restaurants' =>$memebr_restaurants];
 
-
-        return view('restaurant',$data);
+        return view('restaurant_1',$data);
     }
 
-    public function search(Request $request)
+    public function home_2($id)
+    {
+        $meal=Meal::where('restaurant_id',$id)->get();
+
+        $restaurant=Restaurant::find($id);
+
+//        $memebr_restaurants = Member_restaurant::where('member_id',Auth::user()->id)
+//            ->where('restaurant_id',$id)->get();
+        $data=['meals'=>$meal]+['restaurant'=>$restaurant];
+
+        return view('restaurant_2',$data);
+    }
+
+    public function search_1(Request $request)
     {
         $restaurants = Restaurant::orderBy('id','ASC')
             ->where('name','like',"%".$request->booksearch."%")
             ->get();
         $data = ['restaurants'=>$restaurants];
-        return View('restaurant_main',$data);
+        return View('restaurant_main_1',$data);
+    }
 
+    public function search_2(Request $request)
+    {
+        $restaurants = Restaurant::orderBy('id','ASC')
+            ->where('name','like',"%".$request->booksearch."%")
+            ->get();
+        $data = ['restaurants'=>$restaurants];
+        return View('restaurant_main_2',$data);
     }
 
     public function restaurant_subscribe(Request $request)

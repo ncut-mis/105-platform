@@ -15,24 +15,27 @@ Route::get('/', function () {
     return view('index');
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 /*搜尋*/
-Route::get('/001', function () {return view('search');});
+//Route::get('/001', function () {return view('search');});
     /*搜尋頁面*/
-Route::get('/restaurant',['as' => 'restaurant' , 'uses' => 'RestaurantController@index']);
+//Route::get('/restaurant',['as' => 'restaurant' , 'uses' => 'RestaurantController@index']);
     /*執行搜尋*/
-Route::get('restaurant/search',['as' => 'restaurant.search' , 'uses' => 'RestaurantController@search']);
+//Route::get('restaurant/search',['as' => 'restaurant.search' , 'uses' => 'RestaurantController@search']);
 
-/*餐廳頁面*/
-Route::get('restaurant/{id}/home' ,['as' => 'restaurant{id}.home' , 'uses' => 'RestaurantController@home']);
+/*餐廳搜尋-有會員版*/
+Route::get('restaurant/main',['as' => 'restaurant.search' , 'uses' => 'RestaurantController@search_1']);
+/*餐廳搜尋-無會員版*/
+Route::get('restaurant/main_nom',['as' => 'restaurant.search_nom' , 'uses' => 'RestaurantController@search_2']);
+
+/*餐廳頁面-有會員版*/
+Route::get('restaurant/{id}/home' ,['as' => 'restaurant{id}.home' , 'uses' => 'RestaurantController@home_1']);
 Route::post('member_restaurant' ,['as' => 'restaurant.subscribe' , 'uses' => 'RestaurantController@restaurant_subscribe']);
-
-
-
+/*餐廳頁面-無會員版*/
+Route::get('restaurant/{id}/nom_home' ,['as' => 'restaurant.home' , 'uses' => 'RestaurantController@home_2']);
 
 /*用餐紀錄*/
 Route::get('order/history' ,['as' => 'order.history' , 'uses' => 'OrderController@index']);
@@ -41,10 +44,6 @@ Route::get('order/history/{id}' ,['as' => 'order.history.item' , 'uses' => 'Orde
 /*會員QR*/
 Route::get('member/Verification_Code/save' ,['as' => 'Verification.Code.save' , 'uses' => 'MemberController@VerificationCodeSave']);
 Route::get('member/QRCode' ,['as' => 'member.QRCode' , 'uses' => 'MemberController@QR']);
-
-
-/*餐廳搜尋*/
-Route::get('restaurant/main',['as' => 'restaurant.search' , 'uses' => 'RestaurantController@search']);
 
 //掃描QR頁面*/
 Route::get('scanning', ['as' => 'scanning' , 'uses' => 'MemberController@scan']);
