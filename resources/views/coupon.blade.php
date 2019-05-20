@@ -16,9 +16,11 @@
                     <div class="card-box align-center">
 
                         <h4 class="card-title mbr-fonts-style display-5">
-
-                            <font face="微軟正黑體">剩餘  {{\Carbon\Carbon::now()->diffInDays($cs->EndTime, false) }}  天</font>
-
+                            @if(\Carbon\Carbon::now()->diffInDays($cs->EndTime, false)>=0)
+                                <font face="微軟正黑體">剩餘  {{\Carbon\Carbon::now()->diffInDays($cs->EndTime, false) }}  天</font>
+                            @elseif(\Carbon\Carbon::now()->diffInDays($cs->EndTime, false)<0)
+                                <font face="微軟正黑體">有效期限已過期</font>
+                            @endif
                         </h4>
 
                         <p class="mbr-text mbr-fonts-style display-7">

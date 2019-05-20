@@ -44,17 +44,16 @@
                         </div>
                         <p class="mbr-author-desc mbr-fonts-style display-7">
                             name：
+                        </p>
                         <div>
                             <input name="name" class="form-control" placeholder="請輸入姓名" value="{{$member->name}}" required>
                         </div>
-                        </p>
                         <p class="mbr-author-desc mbr-fonts-style display-7">
-                            個人驗證碼：
-                            <div>
-                                <input name="token" class="form-control" placeholder="請輸入下方顯示之個人驗證碼" value="{{$member->token}}" required>
-                            </div>
-
+                            <font face="微軟正黑體">個人驗證碼：</font>
                         </p>
+                        <div>
+                            <input name="token" class="form-control" placeholder="請輸入下方顯示之個人驗證碼" value="{{$member->token}}" required>
+                        </div>
                         <p id="token"></p>
                         <script>
                             const messaging = firebase.messaging();
@@ -72,9 +71,9 @@
                                     document.getElementById("token").innerHTML = "目前個人驗證碼為：<br>" +token+"<br>為使各餐廳之優惠卷能成功發送您的手上，請將上述代碼複製並貼上於上方框框中，謝謝。";
                                 });
                         </script>
-                        <div class="col-md-4" style="text-align:center">
-                            <div class="text-right">
-                                <button type="submit" class="btn btn-success">更新</button>
+                        <div class="col-md-12" style="text-align:center">
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-success"><span class="mbri-update"></span><font face="微軟正黑體">更新</font></button>
                             </div>
                         </div>
                     </form>
