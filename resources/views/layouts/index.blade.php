@@ -55,8 +55,6 @@
 
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('restaurant.search_nom')}}"><span
                                     class="mbri-home mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">搜尋餐廳</font></a></li>
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{{route('scanning')}}"><span
-                                    class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span><font face="微軟正黑體">點餐掃描</font></a></li>
 
                 </ul>
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"
