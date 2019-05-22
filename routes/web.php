@@ -64,6 +64,8 @@ Route::delete('member_restaurant/{id}' ,['as' => 'restaurant.unsubscribe' , 'use
 /*測試*/
 Route::get('/000', function () {return view('test');});
 
+Route::get('restaurant/{id}/test_home',['as' => 'test' , 'uses' => 'RestaurantController@test_home']);
+
 
 
 /*會員登入部分*/

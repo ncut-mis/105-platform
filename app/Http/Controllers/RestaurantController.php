@@ -20,6 +20,19 @@ class RestaurantController extends Controller
         ]);
 
     }
+
+    public function test_home($id)
+    {
+        $meal=Meal::where('restaurant_id',$id)->get();
+
+        $restaurant=Restaurant::find($id);
+
+//        $memebr_restaurants = Member_restaurant::where('member_id',Auth::user()->id)
+//            ->where('restaurant_id',$id)->get();
+        $data=['meals'=>$meal]+['restaurant'=>$restaurant];
+        return view('test',$data);
+    }
+
     public function searchp(Request $request)
     {
 
