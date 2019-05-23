@@ -29,6 +29,14 @@
     <!--舊模板-->
     <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet" media="all">
 
+    <style>
+        hr.style-one {
+            border: 0;
+            height: 1px;
+            background: #333;
+            background-image: linear-gradient(to right, #ccc, #333, #ccc);
+        }
+    </style>
 
     <!-- Google Fonts -->
 
@@ -171,7 +179,7 @@
     <div class="container">
         <div class="mu-about-us-area">
             <div class="mu-title">
-                <span class="mu-subtitle"><font face="Comic Sans MS">Discover</font></span>
+                <span class="mu-subtitle">Discover</span>
                 <h2><font face="Comic Sans MS">ABOUT US</font></h2>
             </div>
 
@@ -294,564 +302,413 @@
 <!-- End Counter Section -->
 
 <!-- Start Restaurant Menu -->
-{{--<section id="mu-restaurant-menu">--}}
-{{--    <div class="container">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                <div class="mu-restaurant-menu-area">--}}
+<section id="mu-restaurant-menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-restaurant-menu-area">
 
-{{--                    <div class="mu-title">--}}
-{{--                        <span class="mu-subtitle">Discover</span>--}}
-{{--                        <h2>OUR MENU</h2>--}}
-{{--                    </div>--}}
+                    <div class="mu-title">
+                        <span class="mu-subtitle">Discover</span>
+                        <h2><font face="Comic Sans MS">OUR MENU</font></h2>
+                    </div>
 
-{{--                    <div class="mu-restaurant-menu-content">--}}
-{{--                        <ul class="nav nav-tabs mu-restaurant-menu">--}}
-{{--                            <li class="active"><a href="#breakfast" data-toggle="tab">Breakfast</a></li>--}}
-{{--                            <li><a href="#meals" data-toggle="tab">Meals</a></li>--}}
-{{--                            <li><a href="#snacks" data-toggle="tab">Snacks</a></li>--}}
-{{--                            <li><a href="#desserts" data-toggle="tab">Desserts</a></li>--}}
-{{--                            <li><a href="#drinks" data-toggle="tab">Drinks</a></li>--}}
-{{--                        </ul>--}}
+                    <div class="mu-restaurant-menu-content">
+                        <ul class="nav nav-tabs mu-restaurant-menu">
+                            <li class="active"><a href="#main course" data-toggle="tab"><font face="微軟正黑體">主餐</font></a></li>
+                            <li><a href="#appetizer-1" data-toggle="tab"><font face="微軟正黑體">開胃品</font></a></li>
+                            <li><a href="#salad" data-toggle="tab"><font face="微軟正黑體">沙拉</font></a></li>
+                            <li><a href="#appetizer-2" data-toggle="tab"><font face="微軟正黑體">前菜</font></a></li>
+                            <li><a href="#soup" data-toggle="tab"><font face="微軟正黑體">湯品</font></a></li>
+                            <li><a href="#dessert" data-toggle="tab"><font face="微軟正黑體">甜點</font></a></li>
+                            <li><a href="#drink" data-toggle="tab"><font face="微軟正黑體">飲料</font></a></li>
+                        </ul>
 
-{{--                        <!-- Tab panes -->--}}
-{{--                        <div class="tab-content">--}}
-{{--                            <div class="tab-pane fade in active" id="breakfast">--}}
-{{--                                <div class="mu-tab-content-area">--}}
-{{--                                    <div class="row">--}}
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="main course">
+                                <div class="mu-tab-content-area">
+                                    <div class="row">
+                                        @foreach($meals as $meal)
+                                            @if($meal->category_id==1)
+                                                @if(($meal->id)%2==1)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-left">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <div>
+                                                                                <font face="微軟正黑體">{{$meal->ingredients}}</font>
+                                                                            </div>
+{{--                                                                            <p></p>--}}
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                @if(($meal->id)%2==0)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-right">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <div>
+                                                                                <font face="微軟正黑體">{{$meal->ingredients}}</font>
+                                                                            </div>
+{{--                                                                            <p></p>--}}
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
 
-{{--                                        <div class="col-md-6">--}}
-{{--                                            <div class="mu-tab-content-left">--}}
-{{--                                                <ul class="mu-menu-item-nav">--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-1.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">English Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-2.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$11.95</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-1.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
+                            <div class="tab-pane fade" id="appetizer-1">
+                                <div class="mu-tab-content-area">
+                                    <div class="row">
+                                        @foreach($meals as $meal)
+                                            @if($meal->category_id==2)
+                                                @if(($meal->id)%2==1)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-left">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                @if(($meal->id)%2==0)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-right">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
 
-{{--                                        <div class="col-md-6">--}}
-{{--                                            <div class="mu-tab-content-right">--}}
-{{--                                                <ul class="mu-menu-item-nav">--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-1.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">English Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-2.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$11.95</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-1.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
+                            <div class="tab-pane fade" id="salad">
+                                <div class="mu-tab-content-area">
+                                    <div class="row">
+                                        @foreach($meals as $meal)
+                                            @if($meal->category_id==3)
+                                                @if(($meal->id)%2==1)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-left">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                @if(($meal->id)%2==0)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-right">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
 
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                            <div class="tab-pane fade" id="appetizer-2">
+                                <div class="mu-tab-content-area">
+                                    <div class="row">
+                                        @foreach($meals as $meal)
+                                            @if($meal->category_id==4)
+                                                @if(($meal->id)%2==1)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-left">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                @if(($meal->id)%2==0)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-right">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
 
-{{--                            <div class="tab-pane fade" id="meals">--}}
-{{--                                <div class="mu-tab-content-area">--}}
-{{--                                    <div class="row">--}}
+                            <div class="tab-pane fade" id="soup">
+                                <div class="mu-tab-content-area">
+                                    <div class="row">
+                                        @foreach($meals as $meal)
+                                            @if($meal->category_id==5)
+                                                @if(($meal->id)%2==1)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-left">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                @if(($meal->id)%2==0)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-right">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
 
-{{--                                        <div class="col-md-6">--}}
-{{--                                            <div class="mu-tab-content-left">--}}
-{{--                                                <ul class="mu-menu-item-nav">--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-3.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">English Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-4.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$11.95</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-3.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
+                            <div class="tab-pane fade" id="dessert">
+                                <div class="mu-tab-content-area">
+                                    <div class="row">
+                                        @foreach($meals as $meal)
+                                            @if($meal->category_id==6)
+                                                @if(($meal->id)%2==1)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-left">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                @if(($meal->id)%2==0)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-right">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
 
-{{--                                        <div class="col-md-6">--}}
-{{--                                            <div class="mu-tab-content-right">--}}
-{{--                                                <ul class="mu-menu-item-nav">--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-4.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">English Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-3.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$11.95</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-4.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="tab-pane fade" id="snacks">--}}
-{{--                                <div class="mu-tab-content-area">--}}
-{{--                                    <div class="row">--}}
-
-{{--                                        <div class="col-md-6">--}}
-{{--                                            <div class="mu-tab-content-left">--}}
-{{--                                                <ul class="mu-menu-item-nav">--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-5.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">English Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-6.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$11.95</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-5.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-
-{{--                                        <div class="col-md-6">--}}
-{{--                                            <div class="mu-tab-content-right">--}}
-{{--                                                <ul class="mu-menu-item-nav">--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-5.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">English Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-6.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$11.95</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-5.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="tab-pane fade" id="desserts">--}}
-{{--                                <div class="mu-tab-content-area">--}}
-{{--                                    <div class="row">--}}
-
-{{--                                        <div class="col-md-6">--}}
-{{--                                            <div class="mu-tab-content-left">--}}
-{{--                                                <ul class="mu-menu-item-nav">--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-7.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">English Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-8.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$11.95</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-7.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-
-{{--                                        <div class="col-md-6">--}}
-{{--                                            <div class="mu-tab-content-right">--}}
-{{--                                                <ul class="mu-menu-item-nav">--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-8.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">English Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-7.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$11.95</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-8.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="tab-pane fade" id="drinks">--}}
-{{--                                <div class="mu-tab-content-area">--}}
-{{--                                    <div class="row">--}}
-
-{{--                                        <div class="col-md-6">--}}
-{{--                                            <div class="mu-tab-content-left">--}}
-{{--                                                <ul class="mu-menu-item-nav">--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-9.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">English Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-10.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$11.95</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-9.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-
-{{--                                        <div class="col-md-6">--}}
-{{--                                            <div class="mu-tab-content-right">--}}
-{{--                                                <ul class="mu-menu-item-nav">--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-9.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">English Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-10.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$11.95</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li>--}}
-{{--                                                        <div class="media">--}}
-{{--                                                            <div class="media-left">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <img class="media-object" src="img/menu/item-9.jpg" alt="img">--}}
-{{--                                                                </a>--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="media-body">--}}
-{{--                                                                <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>--}}
-{{--                                                                <span class="mu-menu-price">$15.85</span>--}}
-{{--                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
+                            <div class="tab-pane fade" id="drink">
+                                <div class="mu-tab-content-area">
+                                    <div class="row">
+                                        @foreach($meals as $meal)
+                                            @if($meal->category_id==7)
+                                                @if(($meal->id)%2==1)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-left">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                @if(($meal->id)%2==0)
+                                                    <div class="col-md-6">
+                                                        <div class="mu-tab-content-right">
+                                                            <ul class="mu-menu-item-nav">
+                                                                <li>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>
+                                                                            <span class="mu-menu-price">${{$meal->price}}</span>
+                                                                            <p><font face="微軟正黑體">{{$meal->ingredients}}</font></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="style-one" />
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- End Restaurant Menu -->
 
 <!-- Start Reservation section -->
