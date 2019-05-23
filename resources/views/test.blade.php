@@ -48,12 +48,6 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js') }}"></script>
     <![endif]-->
 
-    <style type="text/css">
-        ul li {
-            list-style-image:url('img/slider/20130930173146.gif');
-        }
-    </style>
-
 </head>
 <body>
 
@@ -80,7 +74,7 @@
 
                 <!--  Text based logo  -->
 {{--                <a class="navbar-brand" href="000"><img src="img/logo/1552986617.jpg" alt="img"></a>--}}
-                <a class="navbar-brand" href="000"><img src="{{url('img/logo/'. $restaurant->logo)}}" alt="img"></a>
+                <a class="navbar-brand" href="#mu-slider"><img src="{{url('img/logo/'. $restaurant->logo)}}" alt="img"></a>
                 <!--  Image based logo  -->
                 <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="Logo img"></a>  -->
 
@@ -88,7 +82,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="top-menu" class="nav navbar-nav navbar-right mu-main-nav">
-                    <li><a href="000"><font face="Comic Sans MS" size="4" color="black">HOME</font></a></li>
+                    <li><a href="#mu-slider"><font face="Comic Sans MS" size="4" color="black">HOME</font></a></li>
                     <li><a href="#mu-about-us"><font face="Comic Sans MS" size="4" color="black">ABOUT US</font></a></li>
                     <li><a href="#mu-restaurant-menu"><font face="Comic Sans MS" size="4" color="black">MENU</font></a></li>
 {{--                    <li><a href="#mu-reservation">RESERVATION</a></li>--}}
@@ -177,9 +171,10 @@
     <div class="container">
         <div class="mu-about-us-area">
             <div class="mu-title">
-                <span class="mu-subtitle">Discover</span>
+                <span class="mu-subtitle"><font face="Comic Sans MS">Discover</font></span>
                 <h2><font face="Comic Sans MS">ABOUT US</font></h2>
             </div>
+
             <div class="col-md-6 welcome-left">
                 <div class="welcome-img">
                     <img src="{{url('img/slider/'. $restaurant->pic4)}}" class="img-responsive zoom-img" alt=""/>
@@ -197,66 +192,51 @@
             </div>
 
             <div class="col-md-6 welcome-right">
-                <h2><font face="微軟正黑體">經 營 理 念</font><font face="Comic Sans MS">　S.T.I.S</font></h2>
-                <h3>
-                    <font face="微軟正黑體">
-                        　<span class="mbri-magic-stick mbr-iconfont mbr-iconfont-btn"></span> <b>誠實</b><font face="Comic Sans MS">　SINCERITY</font><br>
-                        　<span class="mbri-magic-stick mbr-iconfont mbr-iconfont-btn"></span> <b>群力</b><font face="Comic Sans MS">　TEAMWORK</font><br>
-                        　<span class="mbri-magic-stick mbr-iconfont mbr-iconfont-btn"></span> <b>創新</b><font face="Comic Sans MS">　INNOVATION</font><br>
-                        　<span class="mbri-magic-stick mbr-iconfont mbr-iconfont-btn"></span> <b>敏捷</b><font face="Comic Sans MS">　Shrewd</font>
-                    </font>
-                </h3>
-{{--營業時間~尚未設定--}}
-{{--                <div class="open-hours-row">--}}
-{{--                    <div class="col-md-4 open-hours-left">--}}
-{{--                        <h4>OPENING HOURS </h4>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-md-4 open-hours-left">--}}
-{{--                        <h5><font face="微軟正黑體">午餐</font></h5>--}}
-{{--                        <br>--}}
-{{--                        <h6>11:30-14:30</h6>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-md-4 open-hours-left">--}}
-{{--                        <h5><font face="微軟正黑體">晚餐</font></h5>--}}
-{{--                        <h6>17:30-22:00</h6>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                <div style="padding: 10px">
+                    <h2><font face="Comic Sans MS">TASTy SHOPS-<font face="微軟正黑體">台中金典綠園道店</font></font></h2>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="col-md-5" style="padding: 20px">
+                        <img src="{{url('img/slider/'. $restaurant->map)}}" class="img-responsive zoom-img" alt=""/>
+                    </div>
+                    <div class="col-md-7" style="padding: 5px;line-height: 43px">
+                        <ul>
+                            <li><i class="fa fa-phone" aria-hidden="true"> </i><font face="微軟正黑體" size="3">　{{$restaurant->phone }}</font></li>
+                            <li><i class="fa fa-map" aria-hidden="true"> </i><font face="微軟正黑體" size="3">　{{$restaurant->address }}</font></li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><font face="Comic Sans MS" size="3">　service@tasty.com.tw</font></li>
+                            <div class="store_data_google" title="Let's Go Google地圖">
+                                <button class="btn btn-info-outline"><a href="https://www.google.com.tw/maps?q={{$restaurant->address }}" target="_blank" id="googlemap"><font face="微軟正黑體">查看店鋪位址</font></a></button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="open-hours-row">
+                        <div class="col-md-4 open-hours-left">
+                            <h4><font face="Comic Sans MS" size="6">OPENING HOURS</font></h4>
+                        </div>
+                        <div class="col-md-4 open-hours-left">
+                            <h5><font face="Comic Sans MS">LUNCH</font></h5>
+                            <h5><font face="Comic Sans MS">11:30-14:30</font></h5>
+                        </div>
+                        <div class="col-md-4 open-hours-left">
+                            <h5><font face="Comic Sans MS">DINNER</font></h5>
+                            <h5><font face="Comic Sans MS">17:30-22:00</font></h5>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-12" style="margin-top:30px">
+                    <h3><i class="fa fa-info-circle" aria-hidden="true"><font face="微軟正黑體"><b> 停 車 資 訊</b></font></i></h3>
+                </div>
+                <div class="col-md-12" style="margin-top:15px;line-height: 20px">
+                    <font face="微軟正黑體">　1. 消費發票(滿)$500抵1HR，$1,000抵2HR，$2,000元抵3HR，<p>　　最多抵6HR(即消費$5,000)。<br />　2. 超過折抵時數後，平日停車$40/HR、假日$60/HR。<br />　3. 禮券消費會開立憑證抵停車費。</font>
+                </div>
             </div>
         </div>
-
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                <div class="mu-about-us-area">--}}
-
-{{--                    <div class="mu-title">--}}
-{{--                        <span class="mu-subtitle">Discover</span>--}}
-{{--                        <h2>ABOUT US</h2>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="row">--}}
-{{--                        <div class="col-md-6" style="text-align: center">--}}
-{{--                            <div class="mu-about-us-left">--}}
-{{--                                <img src="{{url('img/slider/'. $restaurant->pic4)}}" alt="img" width="80%">--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-md-6">--}}
-{{--                            <div class="mu-about-us-right">--}}
-{{--                                <h2><font face="微軟正黑體">公司簡介</font></h2>--}}
-{{--                                <ul>--}}
-{{--                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>--}}
-{{--                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>--}}
-{{--                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia.</li>--}}
-{{--                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>--}}
-{{--                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>--}}
-{{--                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia.</li>--}}
-{{--                                </ul>--}}
-{{--                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque similique molestias est quod reprehenderit, quibusdam nam qui, quam magnam.</p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
     </div>
 </section>
 <!-- End About us -->

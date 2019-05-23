@@ -190,7 +190,7 @@ p {
     border: 2px dashed #ff8c00;
 }
 .open-hours-left {
-    padding: 3.85em 0;
+    padding: 3.7em 0;
     text-align: center;
 	-webkit-transition: .5s all;
 	-moz-transition: .5s all; 
@@ -212,7 +212,7 @@ p {
 .open-hours-left h6 {
     font-size: 1em;
     font-family: 'Roboto', sans-serif;
-    color: #555; 
+    color: #555;
 	-webkit-transition: .5s all;
 	-moz-transition: .5s all; 
 	transition: .5s all;
