@@ -315,7 +315,8 @@
 
                     <div class="mu-restaurant-menu-content">
                         <ul class="nav nav-tabs mu-restaurant-menu">
-                            <li class="active"><a href="#main course" data-toggle="tab"><font face="微軟正黑體">主餐</font></a></li>
+{{--                            <li class="active"><a href="#all" data-toggle="tab"><font face="微軟正黑體">ALL</font></a></li>--}}
+                            <li class="active"><a href="#main_course" data-toggle="tab"><font face="微軟正黑體">主餐</font></a></li>
                             <li><a href="#appetizer-1" data-toggle="tab"><font face="微軟正黑體">開胃品</font></a></li>
                             <li><a href="#salad" data-toggle="tab"><font face="微軟正黑體">沙拉</font></a></li>
                             <li><a href="#appetizer-2" data-toggle="tab"><font face="微軟正黑體">前菜</font></a></li>
@@ -326,7 +327,62 @@
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div class="tab-pane fade in active" id="main course">
+{{--                            <div class="tab-pane fade in active" id="all">--}}
+{{--                                <div class="mu-tab-content-area">--}}
+{{--                                    <div class="row">--}}
+{{--                                        @foreach($meals as $meal)--}}
+{{--                                            @if(($meal->id)%2==1)--}}
+{{--                                                <div class="col-md-6">--}}
+{{--                                                    <div class="mu-tab-content-left">--}}
+{{--                                                        <ul class="mu-menu-item-nav">--}}
+{{--                                                            <li>--}}
+{{--                                                                <div class="media">--}}
+{{--                                                                    <div class="media-left">--}}
+{{--                                                                        <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="media-body">--}}
+{{--                                                                        <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>--}}
+{{--                                                                        <span class="mu-menu-price">${{$meal->price}}</span>--}}
+{{--                                                                        <div>--}}
+{{--                                                                            <font face="微軟正黑體">{{$meal->ingredients}}</font>--}}
+{{--                                                                        </div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </div>--}}
+{{--                                                                <hr class="style-one" />--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            @endif--}}
+{{--                                            @if(($meal->id)%2==0)--}}
+{{--                                                <div class="col-md-6">--}}
+{{--                                                    <div class="mu-tab-content-right">--}}
+{{--                                                        <ul class="mu-menu-item-nav">--}}
+{{--                                                            <li>--}}
+{{--                                                                <div class="media">--}}
+{{--                                                                    <div class="media-left">--}}
+{{--                                                                        <a><img class="media-object" src="{{url('img/meal/'. $meal->photo)}}" alt="img"></a>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="media-body">--}}
+{{--                                                                        <h4 class="media-heading"><a><font face="微軟正黑體">{{$meal->name}}</font></a></h4>--}}
+{{--                                                                        <span class="mu-menu-price">${{$meal->price}}</span>--}}
+{{--                                                                        <div>--}}
+{{--                                                                            <font face="微軟正黑體">{{$meal->ingredients}}</font>--}}
+{{--                                                                        </div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </div>--}}
+{{--                                                                <hr class="style-one" />--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            @endif--}}
+{{--                                        @endforeach--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+
+                            <div class="tab-pane fade in active" id="main_course">
                                 <div class="mu-tab-content-area">
                                     <div class="row">
                                         @foreach($meals as $meal)
@@ -346,7 +402,6 @@
                                                                             <div>
                                                                                 <font face="微軟正黑體">{{$meal->ingredients}}</font>
                                                                             </div>
-{{--                                                                            <p></p>--}}
                                                                         </div>
                                                                     </div>
                                                                     <hr class="style-one" />
@@ -370,7 +425,6 @@
                                                                             <div>
                                                                                 <font face="微軟正黑體">{{$meal->ingredients}}</font>
                                                                             </div>
-{{--                                                                            <p></p>--}}
                                                                         </div>
                                                                     </div>
                                                                     <hr class="style-one" />
