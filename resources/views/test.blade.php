@@ -966,27 +966,21 @@
 
                     <div class="mu-title">
                         <span class="mu-subtitle">Get In Touch</span>
-                        <h2>Contact Us</h2>
+                        <h2><font face="Comic Sans MS">Contact Us</font></h2>
                     </div>
 
-                    <div class="mu-contact-content">
-                        <div class="row">
-                            <div class="col-md-6 contact-left" style="background-color: red">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.4659083715702!2d120.68828058370418!3d24.17198324265401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346917dd4dba3f95%3A0x81bacc5a96203fe0!2zNDA25Y-w5Lit5biC5YyX5bGv5Y2A5paH5b-D6Lev5Zub5q61Njk16Jmf!5e0!3m2!1szh-TW!2stw!4v1552386787322" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="contact">
+                        <div class="col-md-12 contact-right">
+                            <div class="wthree-contact-row">
+                                <h4><font face="Comic Sans MS">Get In Touch</font></h4>
+                                <form action="#" method="post">
+                                    <div><input type="text" name="Name" placeholder="Name" required="">　<input class="email" type="text" name="Email" placeholder="Email" required=""></div>
+                                    <textarea placeholder="Message" name="Message" required=""></textarea>
+                                    <div style="text-align: center"><input type="submit" value="SUBMIT"></div>
+                                </form>
                             </div>
-                            <div class="col-md-6 contact-right" style="background-color: #5cb85c">
-                                <div class="wthree-contact-row">
-                                    <h4>Get In TOuch</h4>
-                                    <form action="#" method="post">
-                                        <input type="text" name="Name" placeholder="Name" required="">
-                                        <input class="email" type="text" name="Email" placeholder="Email" required="">
-                                        <textarea placeholder="Message" name="Message" required=""></textarea>
-                                        <input type="submit" value="SUBMIT">
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="clearfix"> </div>
                         </div>
+                        <div class="clearfix"> </div>
                     </div>
                 </div>
             </div>
