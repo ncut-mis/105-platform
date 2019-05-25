@@ -996,26 +996,20 @@
 <!-- End Map section -->
 
 <!-- Start Footer -->
-{{--<footer id="mu-footer">--}}
-{{--    <div class="container">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                <div class="mu-footer-area">--}}
-{{--                    <div class="mu-footer-social">--}}
-{{--                        <a href="#"><span class="fa fa-facebook"></span></a>--}}
-{{--                        <a href="#"><span class="fa fa-twitter"></span></a>--}}
-{{--                        <a href="#"><span class="fa fa-google-plus"></span></a>--}}
-{{--                        <a href="#"><span class="fa fa-linkedin"></span></a>--}}
-{{--                        <a href="#"><span class="fa fa-youtube"></span></a>--}}
-{{--                    </div>--}}
-{{--                    <div class="mu-footer-copyright">--}}
-{{--                        <p>&copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</footer>--}}
+<footer id="mu-footer">
+    <div class="container">
+        <div class="mu-footer-area">
+            <div class="social-icon">
+                <a class="social-button twitter"><i class="fa fa-twitter"></i></a>
+                <a class="social-button facebook"><i class="fa fa-facebook"></i></a>
+                <a class="social-button google"><i class="fa fa-google-plus"></i></a>
+                <a class="social-button dribbble"><i class="fa fa-dribbble"></i></a>
+                <a class="social-button skype"><i class="fa fa-skype"></i></a>
+            </div>
+            <font face="Comic Sans MS" color="#ffffff">Copyright @ TASTy Steak . All right reserved.</font>
+        </div>
+    </div>
+</footer>
 <!-- End Footer -->
 
 <!-- jQuery library -->
