@@ -885,13 +885,38 @@
                                         <img src="{{url('img/post/'. $post->pic)}}" width="70%" alt="123" class="img-responsive" style="margin-left: 15%"/>
                                         <div class="overlay">
                                             <h4>{{$post->title}}</h4>
-                                            <br><div class="info nullbutton button" data-toggle="modal" data-target="#modal14">Show More</div>
+                                            <br><div class="info nullbutton button" data-toggle="modal" data-target="#exampleModal{{$post->id}}">Show More</div>
+                                        </div>
+                                        <div class="modal fade" id="exampleModal{{$post->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="exampleModalLabel" style="text-align: center">{{$post->title}}</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-md-12" style="text-align:justify;text-justify: distribute;margin-top: 20px">
+                                                        <font face="微軟正黑體">{{$post->content}}</font>
+                                                    </div>
+                                                    <div class="col-md-12" style="margin-top: 20px">
+                                                        <img src="{{url('img/post/'. $post->pic)}}" width="70%" alt="123" style="margin-left: 15%"/>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <div class="col-md-12" style="text-align: center;margin-top: 20px">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </a>
                                     <br>
                                 </div>
+
                             </div>
                         @endforeach
+
                         <div class="clearfix"> </div>
                     </div>
                 </div>
