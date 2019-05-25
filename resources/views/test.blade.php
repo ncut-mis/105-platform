@@ -93,7 +93,6 @@
                     <li><a href="#mu-slider"><font face="Comic Sans MS" size="4" color="black">HOME</font></a></li>
                     <li><a href="#mu-about-us"><font face="Comic Sans MS" size="4" color="black">ABOUT US</font></a></li>
                     <li><a href="#mu-restaurant-menu"><font face="Comic Sans MS" size="4" color="black">MENU</font></a></li>
-{{--                    <li><a href="#mu-reservation">RESERVATION</a></li>--}}
                     <li><a href="#mu-gallery"><font face="Comic Sans MS" size="4" color="black">NEWS</font></a></li>
                     <li><a href="#mu-chef"><font face="Comic Sans MS" size="4" color="black">OUR CHEFS</font></a></li>
                     <li><a href="#mu-contact"><font face="Comic Sans MS" size="4" color="black">CONTACT</font></a></li>
@@ -250,55 +249,55 @@
 <!-- End About us -->
 
 <!-- Start Counter Section -->
-{{--<section id="mu-counter">--}}
-{{--    <div class="mu-counter-overlay">--}}
-{{--        <div class="container">--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-md-12">--}}
-{{--                    <div class="mu-counter-area">--}}
+<section id="mu-counter">
+    <div class="mu-counter-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mu-counter-area">
 
-{{--                        <ul class="mu-counter-nav">--}}
+                        <ul class="mu-counter-nav">
 
-{{--                            <li class="col-md-3 col-sm-3 col-xs-12">--}}
-{{--                                <div class="mu-single-counter">--}}
-{{--                                    <span>Fresh</span>--}}
-{{--                                    <h3><span class="counter-value" data-count="150">0</span><sup>+</sup></h3>--}}
-{{--                                    <p>Breakfast Items</p>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
+                            <li class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="mu-single-counter">
+                                    <span>Fresh</span>
+                                    <h3><span class="counter-value" data-count="150">0</span><sup>+</sup></h3>
+                                    <p>Breakfast Items</p>
+                                </div>
+                            </li>
 
-{{--                            <li class="col-md-3 col-sm-3 col-xs-12">--}}
-{{--                                <div class="mu-single-counter">--}}
-{{--                                    <span>Delicious</span>--}}
-{{--                                    <h3><span class="counter-value" data-count="60">0</span><sup>+</sup></h3>--}}
-{{--                                    <p>Lunch Items</p>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
+                            <li class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="mu-single-counter">
+                                    <span>Delicious</span>
+                                    <h3><span class="counter-value" data-count="60">0</span><sup>+</sup></h3>
+                                    <p>Lunch Items</p>
+                                </div>
+                            </li>
 
-{{--                            <li class="col-md-3 col-sm-3 col-xs-12">--}}
-{{--                                <div class="mu-single-counter">--}}
-{{--                                    <span>Hot</span>--}}
-{{--                                    <h3><span class="counter-value" data-count="45">0</span><sup>+</sup></h3>--}}
-{{--                                    <p>Coffee Items</p>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
+                            <li class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="mu-single-counter">
+                                    <span>Hot</span>
+                                    <h3><span class="counter-value" data-count="45">0</span><sup>+</sup></h3>
+                                    <p>Coffee Items</p>
+                                </div>
+                            </li>
 
-{{--                            <li class="col-md-3 col-sm-3 col-xs-12">--}}
-{{--                                <div class="mu-single-counter">--}}
-{{--                                    <span>Satisfied</span>--}}
-{{--                                    <h3><span class="counter-value" data-count="6560">0</span><sup>+</sup></h3>--}}
-{{--                                    <p>Customers</p>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
+                            <li class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="mu-single-counter">
+                                    <span>Satisfied</span>
+                                    <h3><span class="counter-value" data-count="6560">0</span><sup>+</sup></h3>
+                                    <p>Customers</p>
+                                </div>
+                            </li>
 
-{{--                        </ul>--}}
+                        </ul>
 
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- End Counter Section -->
 
 <!-- Start Restaurant Menu -->
@@ -765,106 +764,6 @@
 </section>
 <!-- End Restaurant Menu -->
 
-<!-- Start Reservation section -->
-{{--<section id="mu-reservation">--}}
-{{--    <div class="container">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                <div class="mu-reservation-area">--}}
-
-{{--                    <div class="mu-title">--}}
-{{--                        <span class="mu-subtitle">Make A</span>--}}
-{{--                        <h2>Reservation</h2>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="mu-reservation-content">--}}
-{{--                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quidem autem iusto, perspiciatis, amet, quaerat blanditiis ducimus eius recusandae nisi aut totam alias consectetur et.</p>--}}
-
-{{--                        <div class="col-md-6">--}}
-{{--                            <div class="mu-reservation-left">--}}
-{{--                                <form class="mu-reservation-form">--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-md-12">--}}
-{{--                                            <div class="form-group">--}}
-{{--                                                <input type="text" class="form-control" placeholder="Full Name">--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-md-12">--}}
-{{--                                            <div class="form-group">--}}
-{{--                                                <input type="email" class="form-control" placeholder="Email">--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-md-12">--}}
-{{--                                            <div class="form-group">--}}
-{{--                                                <input type="text" class="form-control" placeholder="Phone Number">--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-md-12">--}}
-{{--                                            <div class="form-group">--}}
-{{--                                                <select class="form-control">--}}
-{{--                                                    <option value="0">How Many?</option>--}}
-{{--                                                    <option value="1 Person">1 Person</option>--}}
-{{--                                                    <option value="2 People">2 People</option>--}}
-{{--                                                    <option value="3 People">3 People</option>--}}
-{{--                                                    <option value="4 People">4 People</option>--}}
-{{--                                                    <option value="5 People">5 People</option>--}}
-{{--                                                    <option value="6 People">6 People</option>--}}
-{{--                                                    <option value="7 People">7 People</option>--}}
-{{--                                                    <option value="8 People">8 People</option>--}}
-{{--                                                    <option value="9 People">9 People</option>--}}
-{{--                                                    <option value="10 People">10 People</option>--}}
-{{--                                                </select>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-md-12">--}}
-{{--                                            <div class="form-group">--}}
-{{--                                                <input type="text" class="form-control" id="datepicker" placeholder="Date">--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-md-12">--}}
-{{--                                            <div class="form-group">--}}
-{{--                                                <textarea class="form-control" cols="30" rows="10" placeholder="Your Message"></textarea>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <button type="submit" class="mu-readmore-btn">Make Reservation</button>--}}
-{{--                                    </div>--}}
-{{--                                </form>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="col-md-5 col-md-offset-1">--}}
-{{--                            <div class="mu-reservation-right">--}}
-{{--                                <div class="mu-opening-hour">--}}
-{{--                                    <h2>Opening Hours</h2>--}}
-{{--                                    <ul class="list-unstyled">--}}
-{{--                                        <li>--}}
-{{--                                            <p>Monday &amp; Tuesday</p>--}}
-{{--                                            <p>9:00 AM - 4:00 PM</p>--}}
-{{--                                        </li>--}}
-{{--                                        <li>--}}
-{{--                                            <p>Wednesday &amp; Thursday</p>--}}
-{{--                                            <p>9:00 AM - Midnight</p>--}}
-{{--                                        </li>--}}
-{{--                                        <li>--}}
-{{--                                            <p>Friday &amp; Saturday</p>--}}
-{{--                                            <p>9:00 AM - Midnight</p>--}}
-{{--                                        </li>--}}
-{{--                                        <li>--}}
-{{--                                            <p>Sunday</p>--}}
-{{--                                            <p>9:00 AM - 11:00 PM</p>--}}
-{{--                                        </li>--}}
-{{--                                    </ul>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
-<!-- End Reservation section -->
-
 <!-- Start Gallery -->
 <section id="mu-gallery">
     <div class="container">
@@ -913,10 +812,8 @@
                                     </a>
                                     <br>
                                 </div>
-
                             </div>
                         @endforeach
-
                         <div class="clearfix"> </div>
                     </div>
                 </div>
@@ -984,244 +881,118 @@
 <!-- End Client Testimonial section -->
 
 <!-- Start Chef Section -->
-{{--<section id="mu-chef">--}}
-{{--    <div class="container">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                <div class="mu-chef-area">--}}
-
-{{--                    <div class="mu-title">--}}
-{{--                        <span class="mu-subtitle">Our Professionals</span>--}}
-{{--                        <h2>MASTER CHEFS</h2>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="mu-chef-content">--}}
-{{--                        <ul class="mu-chef-nav">--}}
-{{--                            <li>--}}
-{{--                                <div class="mu-single-chef">--}}
-{{--                                    <figure class="mu-single-chef-img">--}}
-{{--                                        <img src="img/chef/chef-1.jpg" alt="chef img">--}}
-{{--                                    </figure>--}}
-{{--                                    <div class="mu-single-chef-info">--}}
-{{--                                        <h4>Simon Jonson</h4>--}}
-{{--                                        <span>Head Chef</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="mu-single-chef-social">--}}
-{{--                                        <a href="#"><i class="fa fa-facebook"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-twitter"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-google-plus"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-linkedin"></i></a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-
-{{--                            <li>--}}
-{{--                                <div class="mu-single-chef">--}}
-{{--                                    <figure class="mu-single-chef-img">--}}
-{{--                                        <img src="img/chef/chef-2.jpg" alt="chef img">--}}
-{{--                                    </figure>--}}
-{{--                                    <div class="mu-single-chef-info">--}}
-{{--                                        <h4>Kelly Wenzel</h4>--}}
-{{--                                        <span>Pizza Chef</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="mu-single-chef-social">--}}
-{{--                                        <a href="#"><i class="fa fa-facebook"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-twitter"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-google-plus"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-linkedin"></i></a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-
-{{--                            <li>--}}
-{{--                                <div class="mu-single-chef">--}}
-{{--                                    <figure class="mu-single-chef-img">--}}
-{{--                                        <img src="img/chef/chef-3.jpg" alt="chef img">--}}
-{{--                                    </figure>--}}
-{{--                                    <div class="mu-single-chef-info">--}}
-{{--                                        <h4>Greg Hong</h4>--}}
-{{--                                        <span>Grill Chef</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="mu-single-chef-social">--}}
-{{--                                        <a href="#"><i class="fa fa-facebook"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-twitter"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-google-plus"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-linkedin"></i></a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-
-{{--                            <li>--}}
-{{--                                <div class="mu-single-chef">--}}
-{{--                                    <figure class="mu-single-chef-img">--}}
-{{--                                        <img src="img/chef/chef-4.jpg" alt="chef img">--}}
-{{--                                    </figure>--}}
-{{--                                    <div class="mu-single-chef-info">--}}
-{{--                                        <h4>Marty Fukuda</h4>--}}
-{{--                                        <span>Burger Chef</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="mu-single-chef-social">--}}
-{{--                                        <a href="#"><i class="fa fa-facebook"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-twitter"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-google-plus"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-linkedin"></i></a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-
-{{--                            <li>--}}
-{{--                                <div class="mu-single-chef">--}}
-{{--                                    <figure class="mu-single-chef-img">--}}
-{{--                                        <img src="img/chef/chef-5.jpg" alt="chef img">--}}
-{{--                                    </figure>--}}
-{{--                                    <div class="mu-single-chef-info">--}}
-{{--                                        <h4>Simon Jonson</h4>--}}
-{{--                                        <span>Head Chef</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="mu-single-chef-social">--}}
-{{--                                        <a href="#"><i class="fa fa-facebook"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-twitter"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-google-plus"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-linkedin"></i></a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-
-{{--                            <li>--}}
-{{--                                <div class="mu-single-chef">--}}
-{{--                                    <figure class="mu-single-chef-img">--}}
-{{--                                        <img src="img/chef/chef-1.jpg" alt="chef img">--}}
-{{--                                    </figure>--}}
-{{--                                    <div class="mu-single-chef-info">--}}
-{{--                                        <h4>Kelly Wenzel</h4>--}}
-{{--                                        <span>Pizza Chef</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="mu-single-chef-social">--}}
-{{--                                        <a href="#"><i class="fa fa-facebook"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-twitter"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-google-plus"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-linkedin"></i></a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-
-{{--                            <li>--}}
-{{--                                <div class="mu-single-chef">--}}
-{{--                                    <figure class="mu-single-chef-img">--}}
-{{--                                        <img src="img/chef/chef-2.jpg" alt="chef img">--}}
-{{--                                    </figure>--}}
-{{--                                    <div class="mu-single-chef-info">--}}
-{{--                                        <h4>Greg Hong</h4>--}}
-{{--                                        <span>Grill Chef</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="mu-single-chef-social">--}}
-{{--                                        <a href="#"><i class="fa fa-facebook"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-twitter"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-google-plus"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-linkedin"></i></a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-
-{{--                            <li>--}}
-{{--                                <div class="mu-single-chef">--}}
-{{--                                    <figure class="mu-single-chef-img">--}}
-{{--                                        <img src="img/chef/chef-3.jpg" alt="chef img">--}}
-{{--                                    </figure>--}}
-{{--                                    <div class="mu-single-chef-info">--}}
-{{--                                        <h4>Marty Fukuda</h4>--}}
-{{--                                        <span>Burger Chef</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="mu-single-chef-social">--}}
-{{--                                        <a href="#"><i class="fa fa-facebook"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-twitter"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-google-plus"></i></a>--}}
-{{--                                        <a href="#"><i class="fa fa-linkedin"></i></a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
+<section id="mu-chef">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-chef-area">
+                    <div class="mu-title">
+                        <span class="mu-subtitle">Our Professionals</span>
+                        <h2><font face="Comic Sans MS">MASTER CHEFS</font></h2>
+                    </div>
+{{--Old 模板--}}
+                    <div class="team-row">
+                        <div class="col-md-3 team-grids">
+                            <div class="w3ls-effect">
+                                <img src="http://www.canyin88.com/uploads/image/20151104/1446618908740300.jpg" alt="img">
+                                <div class="view-caption">
+                                    <h4><font face="Comic Sans MS">John Smith</font></h4>
+                                    <p><font face="Comic Sans MS">Chef</font></p>
+                                </div>
+                                <div class="social-icon">
+                                    <a class="social-button twitter"><i class="fa fa-twitter"></i></a>
+                                    <a class="social-button facebook"><i class="fa fa-facebook"></i></a>
+                                    <a class="social-button google"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 team-grids">
+                            <div class="w3ls-effect">
+                                <img src="https://tse1.mm.bing.net/th?id=OIP.InPOeJdKFf4WkbvXTmQ6agHaE5&pid=15.1&P=0&w=282&h=187" alt="img">
+                                <div class="view-caption">
+                                    <h4><font face="Comic Sans MS">Thomson Doe</font></h4>
+                                    <p><font face="Comic Sans MS">Chef</font></p>
+                                </div>
+                                <div class="social-icon">
+                                    <a class="social-button twitter"><i class="fa fa-twitter"></i></a>
+                                    <a class="social-button facebook"><i class="fa fa-facebook"></i></a>
+                                    <a class="social-button google"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 team-grids">
+                            <div class="w3ls-effect">
+                                <img src="https://tse1.mm.bing.net/th?id=OIP.Xy_Wd_0ABFV2yoVu-Yr--AHaE-&pid=15.1&P=0&w=259&h=175" alt="img">
+                                <div class="view-caption">
+                                    <h4><font face="Comic Sans MS">Smith Kevin</font></h4>
+                                    <p><font face="Comic Sans MS">Chef</font></p>
+                                </div>
+                                <div class="social-icon">
+                                    <a class="social-button twitter"><i class="fa fa-twitter"></i></a>
+                                    <a class="social-button facebook"><i class="fa fa-facebook"></i></a>
+                                    <a class="social-button google"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 team-grids">
+                            <div class="w3ls-effect">
+                                <img src="/img/chef/4.jpg" alt="img">
+                                <div class="view-caption">
+                                    <h4><font face="微軟正黑體">阿基師</font></h4>
+                                    <p><font face="Comic Sans MS">Chef</font></p>
+                                </div>
+                                <div class="social-icon">
+                                    <a class="social-button twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://zh.wikipedia.org/wiki/%E9%98%BF%E5%9F%BA%E5%B8%AB" class="social-button facebook"><i class="fa fa-wikipedia-w"></i></a>
+                                    <a class="social-button google"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- End Chef Section -->
 
-
-
 <!-- Start Contact section -->
-{{--<section id="mu-contact">--}}
-{{--    <div class="container">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                <div class="mu-contact-area">--}}
+<section id="mu-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-contact-area">
 
-{{--                    <div class="mu-title">--}}
-{{--                        <span class="mu-subtitle">Get In Touch</span>--}}
-{{--                        <h2>Contact Us</h2>--}}
-{{--                    </div>--}}
+                    <div class="mu-title">
+                        <span class="mu-subtitle">Get In Touch</span>
+                        <h2>Contact Us</h2>
+                    </div>
 
-{{--                    <div class="mu-contact-content">--}}
-{{--                        <div class="row">--}}
-
-{{--                            <div class="col-md-6">--}}
-{{--                                <div class="mu-contact-left">--}}
-{{--                                    <!-- Email message div -->--}}
-{{--                                    <div id="form-messages"></div>--}}
-{{--                                    <!-- Start contact form -->--}}
-{{--                                    <form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">--}}
-{{--                                        <div class="form-group">--}}
-{{--                                            <label for="name">Your Name</label>--}}
-{{--                                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="form-group">--}}
-{{--                                            <label for="email">Email address</label>--}}
-{{--                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="form-group">--}}
-{{--                                            <label for="subject">Subject</label>--}}
-{{--                                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="form-group">--}}
-{{--                                            <label for="message">Message</label>--}}
-{{--                                            <textarea class="form-control" id="message" name="message"  cols="30" rows="10" placeholder="Type Your Message" required></textarea>--}}
-{{--                                        </div>--}}
-{{--                                        <button type="submit" class="mu-send-btn">Send Message</button>--}}
-{{--                                    </form>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="col-md-6">--}}
-{{--                                <div class="mu-contact-right">--}}
-{{--                                    <div class="mu-contact-widget">--}}
-{{--                                        <h3>Office Address</h3>--}}
-{{--                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia temporibus corporis ea non consequatur porro corrupti hic voluptatibus assumenda, doloribus.</p>--}}
-{{--                                        <address>--}}
-{{--                                            <p><i class="fa fa-phone"></i> (850) 457 6688</p>--}}
-{{--                                            <p><i class="fa fa-envelope-o"></i>contact@markups.io</p>--}}
-{{--                                            <p><i class="fa fa-map-marker"></i>368 St. Panama City, Florida, USA</p>--}}
-{{--                                        </address>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="mu-contact-widget">--}}
-{{--                                        <h3>Open Hours</h3>--}}
-{{--                                        <address>--}}
-{{--                                            <p><span>Monday - Friday</span> 9.00 am to 12 pm</p>--}}
-{{--                                            <p><span>Saturday</span> 9.00 am to 10 pm</p>--}}
-{{--                                            <p><span>Sunday</span> 10.00 am to 12 pm</p>--}}
-{{--                                        </address>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
+                    <div class="mu-contact-content">
+                        <div class="row">
+                            <div class="col-md-6 contact-left" style="background-color: red">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.4659083715702!2d120.68828058370418!3d24.17198324265401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346917dd4dba3f95%3A0x81bacc5a96203fe0!2zNDA25Y-w5Lit5biC5YyX5bGv5Y2A5paH5b-D6Lev5Zub5q61Njk16Jmf!5e0!3m2!1szh-TW!2stw!4v1552386787322" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-md-6 contact-right" style="background-color: #5cb85c">
+                                <div class="wthree-contact-row">
+                                    <h4>Get In TOuch</h4>
+                                    <form action="#" method="post">
+                                        <input type="text" name="Name" placeholder="Name" required="">
+                                        <input class="email" type="text" name="Email" placeholder="Email" required="">
+                                        <textarea placeholder="Message" name="Message" required=""></textarea>
+                                        <input type="submit" value="SUBMIT">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- End Contact section -->
 
 <!-- Start Map section -->
