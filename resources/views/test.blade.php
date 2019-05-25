@@ -94,7 +94,7 @@
                     <li><a href="#mu-about-us"><font face="Comic Sans MS" size="4" color="black">ABOUT US</font></a></li>
                     <li><a href="#mu-restaurant-menu"><font face="Comic Sans MS" size="4" color="black">MENU</font></a></li>
 {{--                    <li><a href="#mu-reservation">RESERVATION</a></li>--}}
-                    <li><a href="#mu-gallery"><font face="Comic Sans MS" size="4" color="black">GALLERY</font></a></li>
+                    <li><a href="#mu-gallery"><font face="Comic Sans MS" size="4" color="black">NEWS</font></a></li>
                     <li><a href="#mu-chef"><font face="Comic Sans MS" size="4" color="black">OUR CHEFS</font></a></li>
                     <li><a href="#mu-contact"><font face="Comic Sans MS" size="4" color="black">CONTACT</font></a></li>
                     <li><font face="微軟正黑體"><button class="btn btn-info-outline" onclick="return go()">訂閱！</button></font></li>
@@ -132,7 +132,7 @@
                     <span class="mu-slider-small-title"><font face="Comic Sans MS">Welcome</font></span>
                     <h2 class="mu-slider-title"><font face="微軟正黑體">歡樂美味　盡在西堤</font></h2>
                     <h2><b><font face="Comic Sans MS" color="#ffffff">Let's TASTy</font></b></h2>
-                    <h3><b><font face="Comic Sans MS" color="#ffffff">Let's ENJOY</font></b></h3>
+                    <h3><b><font face="Comic Sans MS" color="#ffffff">Let's ENJOY</font></b></h3><br>
                     <a href="#mu-restaurant-menu" class="mu-readmore-btn mu-reservation-btn">Menu</a>
                 </div>
                 <!-- / Top slider content -->
@@ -147,7 +147,7 @@
                     <span class="mu-slider-small-title"><font face="Comic Sans MS">Preferential</font></span>
                     <h2 class="mu-slider-title"><font face="微軟正黑體">優惠方案-套餐組合</font></h2>
                     <h2><b><font face="Comic Sans MS" color="#ffffff">Let's TASTy</font></b></h2>
-                    <h3><b><font face="Comic Sans MS" color="#ffffff">Let's ENJOY</font></b></h3>
+                    <h3><b><font face="Comic Sans MS" color="#ffffff">Let's ENJOY</font></b></h3><br>
                     <a href="#mu-gallery" class="mu-readmore-btn mu-reservation-btn">Gallery</a>
                 </div>
                 <!-- / Top slider content -->
@@ -162,7 +162,7 @@
                     <span class="mu-slider-small-title"><font face="Comic Sans MS">Get In Touch</font></span>
                     <h2 class="mu-slider-title"><font face="微軟正黑體">想對我們說什麼呢^-^</font></h2>
                     <h2><b><font face="Comic Sans MS" color="#ffffff">Let's TASTy</font></b></h2>
-                    <h3><b><font face="Comic Sans MS" color="#ffffff">Let's ENJOY</font></b></h3>
+                    <h3><b><font face="Comic Sans MS" color="#ffffff">Let's ENJOY</font></b></h3><br>
                     <a href="#mu-contact" class="mu-readmore-btn mu-reservation-btn">Contact</a>
                 </div>
                 <!-- / Top slider content -->
@@ -866,163 +866,39 @@
 <!-- End Reservation section -->
 
 <!-- Start Gallery -->
-{{--<section id="mu-gallery">--}}
-{{--    <div class="container">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                <div class="mu-gallery-area">--}}
+<section id="mu-gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-gallery-area">
 
-{{--                    <div class="mu-title">--}}
-{{--                        <span class="mu-subtitle">Discover</span>--}}
-{{--                        <h2>Our Gallery</h2>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="mu-gallery-content">--}}
-
-{{--                        <!-- Start gallery image -->--}}
-{{--                        <div class="mu-gallery-body">--}}
-{{--                            <!-- start single gallery image -->--}}
-{{--                            <div class="mu-single-gallery col-md-4">--}}
-{{--                                <div class="mu-single-gallery-item">--}}
-{{--                                    <figure class="mu-single-gallery-img">--}}
-{{--                                        <a class="mu-imglink" href="img/gallery/1.jpg">--}}
-{{--                                            <img alt="img" src="img/gallery/1.jpg">--}}
-{{--                                            <div class="mu-single-gallery-info">--}}
-{{--                                                <img class="mu-view-btn" src="img/plus.png" alt="plus icon img">--}}
-{{--                                            </div>--}}
-{{--                                        </a>--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <!-- End single gallery image -->--}}
-
-{{--                            <!-- start single gallery image -->--}}
-{{--                            <div class="mu-single-gallery col-md-4">--}}
-{{--                                <div class="mu-single-gallery-item">--}}
-{{--                                    <figure class="mu-single-gallery-img">--}}
-{{--                                        <a class="mu-imglink" href="img/gallery/2.jpg">--}}
-{{--                                            <img alt="img" src="img/gallery/2.jpg">--}}
-{{--                                            <div class="mu-single-gallery-info">--}}
-{{--                                                <img class="mu-view-btn" src="img/plus.png" alt="plus icon img">--}}
-{{--                                            </div>--}}
-{{--                                        </a>--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <!-- End single gallery image -->--}}
-
-{{--                            <!-- start single gallery image -->--}}
-{{--                            <div class="mu-single-gallery col-md-4">--}}
-{{--                                <div class="mu-single-gallery-item">--}}
-{{--                                    <figure class="mu-single-gallery-img">--}}
-{{--                                        <a class="mu-imglink" href="img/gallery/3.jpg">--}}
-{{--                                            <img alt="img" src="img/gallery/3.jpg">--}}
-{{--                                            <div class="mu-single-gallery-info">--}}
-{{--                                                <img class="mu-view-btn" src="img/plus.png" alt="plus icon img">--}}
-{{--                                            </div>--}}
-{{--                                        </a>--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <!-- End single gallery image -->--}}
-
-{{--                            <!-- start single gallery image -->--}}
-{{--                            <div class="mu-single-gallery col-md-4">--}}
-{{--                                <div class="mu-single-gallery-item">--}}
-{{--                                    <figure class="mu-single-gallery-img">--}}
-{{--                                        <a class="mu-imglink" href="img/gallery/4.jpg">--}}
-{{--                                            <img alt="img" src="img/gallery/4.jpg">--}}
-{{--                                            <div class="mu-single-gallery-info">--}}
-{{--                                                <img class="mu-view-btn" src="img/plus.png" alt="plus icon img">--}}
-{{--                                            </div>--}}
-{{--                                        </a>--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <!-- End single gallery image -->--}}
-
-{{--                            <!-- start single gallery image -->--}}
-{{--                            <div class="mu-single-gallery col-md-4">--}}
-{{--                                <div class="mu-single-gallery-item">--}}
-{{--                                    <figure class="mu-single-gallery-img">--}}
-{{--                                        <a class="mu-imglink" href="img/gallery/5.jpg">--}}
-{{--                                            <img alt="img" src="img/gallery/5.jpg">--}}
-{{--                                            <div class="mu-single-gallery-info">--}}
-{{--                                                <img class="mu-view-btn" src="img/plus.png" alt="plus icon img">--}}
-{{--                                            </div>--}}
-{{--                                        </a>--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <!-- End single gallery image -->--}}
-
-{{--                            <!-- start single gallery image -->--}}
-{{--                            <div class="mu-single-gallery col-md-4">--}}
-{{--                                <div class="mu-single-gallery-item">--}}
-{{--                                    <figure class="mu-single-gallery-img">--}}
-{{--                                        <a class="mu-imglink" href="img/gallery/6.jpg">--}}
-{{--                                            <img alt="img" src="img/gallery/6.jpg">--}}
-{{--                                            <div class="mu-single-gallery-info">--}}
-{{--                                                <img class="mu-view-btn" src="img/plus.png" alt="plus icon img">--}}
-{{--                                            </div>--}}
-{{--                                        </a>--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <!-- End single gallery image -->--}}
-
-{{--                            <!-- start single gallery image -->--}}
-{{--                            <div class="mu-single-gallery col-md-4">--}}
-{{--                                <div class="mu-single-gallery-item">--}}
-{{--                                    <figure class="mu-single-gallery-img">--}}
-{{--                                        <a class="mu-imglink" href="img/gallery/7.jpg">--}}
-{{--                                            <img alt="img" src="img/gallery/7.jpg">--}}
-{{--                                            <div class="mu-single-gallery-info">--}}
-{{--                                                <img class="mu-view-btn" src="img/plus.png" alt="plus icon img">--}}
-{{--                                            </div>--}}
-{{--                                        </a>--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <!-- End single gallery image -->--}}
-
-{{--                            <!-- start single gallery image -->--}}
-{{--                            <div class="mu-single-gallery col-md-4">--}}
-{{--                                <div class="mu-single-gallery-item">--}}
-{{--                                    <figure class="mu-single-gallery-img">--}}
-{{--                                        <a class="mu-imglink" href="img/gallery/8.jpg">--}}
-{{--                                            <img alt="img" src="img/gallery/8.jpg">--}}
-{{--                                            <div class="mu-single-gallery-info">--}}
-{{--                                                <img class="mu-view-btn" src="img/plus.png" alt="plus icon img">--}}
-{{--                                            </div>--}}
-{{--                                        </a>--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <!-- End single gallery image -->--}}
-
-{{--                            <!-- start single gallery image -->--}}
-{{--                            <div class="mu-single-gallery col-md-4">--}}
-{{--                                <div class="mu-single-gallery-item">--}}
-{{--                                    <figure class="mu-single-gallery-img">--}}
-{{--                                        <a class="mu-imglink" href="img/gallery/9.jpg">--}}
-{{--                                            <img alt="img" src="img/gallery/9.jpg">--}}
-{{--                                            <div class="mu-single-gallery-info">--}}
-{{--                                                <img class="mu-view-btn" src="img/plus.png" alt="plus icon img">--}}
-{{--                                            </div>--}}
-{{--                                        </a>--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <!-- End single gallery image -->--}}
-
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
+                    <div class="mu-title">
+                        <span class="mu-subtitle">Discover</span>
+                        <h2><font face="Comic Sans MS">OUR NEWS</font></h2>
+                    </div>
+{{--Old 模板--}}
+                    <div class="gallery-agileinfo-row">
+                        @foreach($posts as $post)
+                            <div class="col-md-4 gallery-grids">
+                                <div class="hover ehover14">
+                                    <a class="swipebox">
+                                        <img src="{{url('img/post/'. $post->pic)}}" width="70%" alt="123" class="img-responsive" style="margin-left: 15%"/>
+                                        <div class="overlay">
+                                            <h4>{{$post->title}}</h4>
+                                            <br><div class="info nullbutton button" data-toggle="modal" data-target="#modal14">Show More</div>
+                                        </div>
+                                    </a>
+                                    <br>
+                                </div>
+                            </div>
+                        @endforeach
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- End Gallery -->
 
 <!-- Start Client Testimonial section -->

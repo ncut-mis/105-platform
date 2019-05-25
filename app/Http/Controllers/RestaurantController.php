@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Member_restaurant;
+use App\Post;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -24,12 +25,12 @@ class RestaurantController extends Controller
     public function test_home($id)
     {
         $meal=Meal::where('restaurant_id',$id)->get();
-
+        $post=Post::where('restaurant_id',$id)->get();
         $restaurant=Restaurant::find($id);
 
 //        $memebr_restaurants = Member_restaurant::where('member_id',Auth::user()->id)
 //            ->where('restaurant_id',$id)->get();
-        $data=['meals'=>$meal]+['restaurant'=>$restaurant];
+        $data=['meals'=>$meal]+['restaurant'=>$restaurant]+['posts'=>$post];
         return view('test',$data);
     }
 

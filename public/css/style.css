@@ -707,10 +707,10 @@ img.zoom-img:hover{
 .ehover14 .overlay {
     -moz-opacity: 0;
     opacity: 0;
-    width: 235px;
-    height: 185px;
-    left: 16%;
-    top: 11%;
+    width: 245px;
+    height: 245px;
+    left: 15%;
+    /*top: 5%;*/
     border: 5px solid #fff;
     -webkit-transition: opacity 0.35s, transform 0.35s;
     -moz-transition: opacity 0.35s, transform 0.35s;
