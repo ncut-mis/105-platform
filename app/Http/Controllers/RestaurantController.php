@@ -5,9 +5,7 @@ use App\Member_restaurant;
 use App\Post;
 use Auth;
 use Illuminate\Http\Request;
-
 use App\Meal as Meal;
-
 use App\Restaurant;
 
 class RestaurantController extends Controller
@@ -19,19 +17,6 @@ class RestaurantController extends Controller
         return view('search', [
             'restaurants' =>$restaurants,
         ]);
-
-    }
-
-    public function test_home($id)
-    {
-        $meal=Meal::where('restaurant_id',$id)->get();
-        $post=Post::where('restaurant_id',$id)->get();
-        $restaurant=Restaurant::find($id);
-
-//        $memebr_restaurants = Member_restaurant::where('member_id',Auth::user()->id)
-//            ->where('restaurant_id',$id)->get();
-        $data=['meals'=>$meal]+['restaurant'=>$restaurant]+['posts'=>$post];
-        return view('test',$data);
     }
 
     public function searchp(Request $request)
@@ -40,32 +25,27 @@ class RestaurantController extends Controller
         $restaurants =Restaurant::where('name','like',"%".$request->booksearch."%")->get();
 
         return View('search',['restaurants'=>$restaurants]);
-
     }
 
     public function home_1($id)
     {
         $meal=Meal::where('restaurant_id',$id)->get();
-
+        $post=Post::where('restaurant_id',$id)->get();
         $restaurant=Restaurant::find($id);
-
         $memebr_restaurants = Member_restaurant::where('member_id',Auth::user()->id)
-        ->where('restaurant_id',$id)->get();
-        $data=['meals'=>$meal]+['restaurant'=>$restaurant]+['member_restaurants' =>$memebr_restaurants];
+            ->where('restaurant_id',$id)->get();
 
+        $data=['meals'=>$meal]+['restaurant'=>$restaurant]+['member_restaurants' =>$memebr_restaurants]+['posts'=>$post];
         return view('restaurant_1',$data);
     }
 
     public function home_2($id)
     {
         $meal=Meal::where('restaurant_id',$id)->get();
-
+        $post=Post::where('restaurant_id',$id)->get();
         $restaurant=Restaurant::find($id);
 
-//        $memebr_restaurants = Member_restaurant::where('member_id',Auth::user()->id)
-//            ->where('restaurant_id',$id)->get();
-        $data=['meals'=>$meal]+['restaurant'=>$restaurant];
-
+        $data=['meals'=>$meal]+['restaurant'=>$restaurant]+['posts'=>$post];
         return view('restaurant_2',$data);
     }
 
