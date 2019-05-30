@@ -64,12 +64,12 @@
                                     .then(token => {
                                         // 成功取得 token
                                         console.log(token);
-                                        document.getElementById("token").innerHTML = "目前個人驗證碼為：<br>" +token+"<br>為使各餐廳之優惠卷能成功發送您的手上，請將上述代碼複製並貼上於上方框框中，謝謝。";
+                                        document.getElementById("token").innerHTML = "目前個人驗證碼為：<br>" +token;
                                         document.getElementById("abc").value=token;
                                     });
                         </script>
                         <div>
-                            <input name="token" class="form-control" placeholder="請輸入下方顯示之個人驗證碼" id="abc" required disabled hidden>
+                            <input name="token" class="form-control" placeholder="請輸入下方顯示之個人驗證碼" id="abc" type="hidden">
                         </div>
 
                         <div class="col-md-12" style="text-align:center">
