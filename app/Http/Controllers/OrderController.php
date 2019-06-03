@@ -12,7 +12,7 @@ use DB;
 class OrderController extends Controller
 {
 
-    public function index()
+    public function history()
     {
         $customers=Order::join('customers','customers.id','=','orders.customer_id')
 
