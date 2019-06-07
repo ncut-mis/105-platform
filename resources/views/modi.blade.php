@@ -21,7 +21,7 @@
         <div class="container">
             <div class="media-container-row">
                 <div class="media-content px-3 align-self-center mbr-white py-2  col-md-6">
-                    <form action="/personal/{{$member->id}}" method="POST" role="form">
+                    <form action="/personal/{{$member->id}}/update" method="POST" role="form">
                         {{ csrf_field() }}
                         {{ method_field('PATCH') }}
                         <p><br></p>

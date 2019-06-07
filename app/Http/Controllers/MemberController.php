@@ -29,7 +29,7 @@ class MemberController extends Controller
         return redirect()->route('member.QRCode');
 
     }
-    public function QR()
+    public function QRShow()
     {
         return view('qrcode');
     }

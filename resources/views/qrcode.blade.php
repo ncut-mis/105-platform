@@ -9,8 +9,8 @@
 
                     <div class="mbr-figure align-center">
 
-                        {!! QrCode::size(250)->generate('http://localhost:8000/member/' . Auth::user()->id. '/verify/'. Auth::user()->verification_code ); !!}
-                        <p>http://localhost:8000/member/{{ Auth::user()->id }}/verify/{{ Auth::user()->verification_code }}</p>
+                        {!! QrCode::size(250)->generate( Auth::user()->verification_code ); !!}
+                        <p>{{ Auth::user()->verification_code }}</p>
 
                     </div>
 
