@@ -6,14 +6,7 @@
 
         <div class="container align-center">
             <div class="row">
-                <div class="mbr-white col-lg-8 col-md-7 content-container">
-                    <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
-                        <font face="微軟正黑體">專為你設計</font>
-                    </h1>
-                    <p class="mbr-text pb-3 mbr-fonts-style display-5">
-                        <font face="微軟正黑體">現在最多外國研究生就讀的學校，不是台成清交，而是出自技職的台灣科技大學。為其他國家培養大量人才，讓當地企業家感動之餘，一捐就價值30億台幣，為何台科大能大舉吸引海外優秀學生？</font>
-                    </p>
-                </div>
+                <div class="col-lg-4"></div>
                 <div class="col-lg-4 col-md-5">
                     <div class="form-container">
                         <div class="media-container-column" data-form-type="formoid">
@@ -68,6 +61,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4"></div>
             </div>
         </div>
     </section>

@@ -15,12 +15,7 @@
                             <br>在選擇餐點上，是否常常都會猶豫不決呢，又不知道該吃什麼?
                             <br>如果你還在猶豫，那就開始使用我們為您精心設計的系統吧!
                         </font>
-
                     </p>
-                    <div class="mbr-section-btn">
-                        <a class="btn btn-md btn-secondary display-4" href="">如何使用</a>
-                        <a class="btn btn-md btn-white-outline display-4" href="">關於我們</a>
-                    </div>
                 </div>
             </div>
         </div>

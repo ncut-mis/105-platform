@@ -27,7 +27,7 @@
                     <p class="mbr-author-desc mbr-fonts-style display-7">
                         <font face="微軟正黑體">{{$mb->email}}</font>
                     </p>
-                     <p class="mbr-author-desc mbr-fonts-style display-7">
+                    <p class="mbr-author-desc mbr-fonts-style display-7" hidden>
                          <font face="微軟正黑體">個人驗證碼：{{$mb->token}}</font>
                     </p>
                     <div class="mbr-section-btn text-center pt-2">

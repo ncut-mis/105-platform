@@ -10,9 +10,6 @@
                     <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1" style="margin-top: 80px">
                         <font face="微軟正黑體">歡迎一起加入我們</font>
                     </h1>
-                    <p class="mbr-text pb-3 mbr-fonts-style display-5">
-                        <font face="微軟正黑體">偶像劇女神邵雨薇，私底下是個「硬派女孩」，無論工作或是肌膚保養，都不放過任何細節。</font>
-                    </p>
                 </div>
             </div>
             <div class="row justify-content-center">
