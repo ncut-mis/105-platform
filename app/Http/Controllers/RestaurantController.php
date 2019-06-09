@@ -53,6 +53,7 @@ class RestaurantController extends Controller
     {
         $restaurants = Restaurant::orderBy('id','ASC')
             ->where('name','like',"%".$request->booksearch."%")
+            ->where('open',0)
             ->get();
         $data = ['restaurants'=>$restaurants];
         return View('restaurant_main_1',$data);
@@ -62,6 +63,7 @@ class RestaurantController extends Controller
     {
         $restaurants = Restaurant::orderBy('id','ASC')
             ->where('name','like',"%".$request->booksearch."%")
+            ->where('open',0)
             ->get();
         $data = ['restaurants'=>$restaurants];
         return View('restaurant_main_2',$data);
