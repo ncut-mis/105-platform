@@ -199,9 +199,6 @@
             </div>
 
             <div class="col-md-6 welcome-right">
-                <div style="padding: 10px">
-                    <h2><font face="Comic Sans MS">TASTy SHOPS-<font face="微軟正黑體">台中金典綠園道店</font></font></h2>
-                </div>
 
                 <div class="col-md-12">
                     <div class="col-md-5" style="padding: 20px">
